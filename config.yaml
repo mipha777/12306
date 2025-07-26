@@ -1,0 +1,31 @@
+# 12306 抢票配置
+user:
+  username: "woshidashuaibi"
+
+ticket_info:
+  # 出发日期，格式：YYYY-MM-DD
+  train_date: "2025-08-03" # 相同车次 有票的某一天
+  train_date_true: "2025-08-09" # 真正要购买票的日期 也就是要抢哪一天的票
+  train_time_true: "02:21:00"
+  # 出发地
+  from_station: "淄博"
+  # 目的地
+  to_station: "阜阳"
+
+  preferred_trains:
+    - K4970 # 车次号
+  seat_priority:
+    - 硬卧  # 期望的座位类型，例如：商务座, 一等座, 二等座
+  sleeper_preference: ""          # 如果是卧铺，优先考虑的铺位
+  window_seat:                   # 是否优先靠窗
+
+passengers:
+  name: "李浩歌"
+
+order:
+  query_interval: 3
+  accept_no_seat: false
+
+
+
+

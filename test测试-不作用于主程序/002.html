@@ -1,0 +1,473 @@
+<!--'html': '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    \n
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    \n
+    <link href="/otn/resources/css/validation.css" rel="stylesheet"/>
+    \n
+    <link href="/otn/resources/merged/common_css.css?cssVersion=1.9093" rel="stylesheet"/>
+    \n
+    <link rel="icon" href="/otn/resources/images/ots/favicon.ico" type="image/x-icon"/>
+    \n
+    <link rel="shortcut icon" href="/otn/resources/images/ots/favicon.ico" type="image/x-icon"/>
+    \n
+    <script>/*<![CDATA[*/ var ctx ='/otn/\';\n    var globalRepeatSubmitToken = null;\n    var global_lang = \'zh_CN\';\n    var sessionInit = \'\';\n    var isShowNotice = null;\n    var CLeftTicketUrl = null;\n    var isTestFlow = null;\n    var isMobileCheck = null;\n    var passport_appId = \'otn\';\n    var passport_login = \'https://kyfw.12306.cn/passport/web/login\';\n    var passport_captcha = \'https://kyfw.12306.cn/passport/captcha/captcha-image\';\n    var passport_authuam = \'https://kyfw.12306.cn/passport/web/auth/uamtk\';\n    var passport_captcha_check = \'https://kyfw.12306.cn/passport/captcha/captcha-check\';\n    var passport_authclient = \'uamauthclient\';\n    var passport_loginPage = \'resources/login.html\';\n    var passport_okPage = \'view/index.html\';\n    var passport_proxy_captcha =  \'resources/login.html\';\n    /*]]>*/\n</script>
+    \n
+    <script src="/otn/resources/merged/common_js.js?scriptVersion=1.94029" type="text/javascript"></script>
+    \n<!-- js i18n --> \n<!-- jquery validation i18n --> \n<!-- head and footer --> \n
+    <script src="/otn/resources/merged/passport_js.js?scriptVersion=1.94029" type="text/javascript"
+            xml:space="preserve"></script>
+    \n
+    <link href="/otn/resources/merged/myOrderStatic_css.css?cssVersion=1.9093" rel="stylesheet"/>
+    \n
+</head>
+\n
+<div class="header">
+    <div class="wrapper"><!-- 头部内容 -->\n
+        <div class="header-con"><h1 class="logo"><a href="http://www.12306.cn/index.html" shape="rect">中国铁路12306</a>\n
+        </h1>\n
+            <div class="header-right"><!-- 搜索条 -->\n
+                <div class="header-search">
+                    <div class="search-bd"><input type="text" class="search-input" value=""
+                                                  placeholder="搜索车票、专列/旅行地/酒店/订餐"
+                                                  data-provide="typeahead"/>\n<!-- 搜索提示 --> \n
+                        <div class="search-down"><a href="javascript:;" class="close" shape="rect">关闭</a>\n
+                            <ul class="search-down-list"></ul>
+                            \n<!-- 热门推荐 --> \n
+                            <!-- <div class="search-down-hot">\n                            <h3 class="search-hot-tit">热门推荐</h3>\n                            <div class="search-hot-key"><a href="#">车站</a><a href="#">进站乘车</a><a href="#">互联网购票</a></div>\n                        </div> -->
+                            \n
+                        </div>
+                        \n<!-- 搜索历史 --> \n
+                        <div class="search-history"><a href="javascript:;" class="history-clear" shape="rect">清除</a>\n
+                            <h3 class="search-history-tit">搜索历史</h3>\n
+                            <ul class="search-history-list"></ul>
+                            \n
+                        </div>
+                        \n
+                    </div>
+                    \n<a class="search-btn" href="javascript:;" shape="rect"><i class="icon icon-search"></i>\n</a>\n
+                </div>
+                \n<!-- 右侧菜单 --> \n
+                <ul class="header-menu">
+                    <li class="menu-item menu-nav"><a href="/otn/view/index.html" class="menu-nav-hd" shape="rect">我的12306\n
+                        <i class="caret"></i>\n</a>\n
+                        <ul class="menu-nav-bd">
+                            <li><a href="/otn/queryOrder/initNoComplete" shape="rect">未完成订单</a>\n</li>
+                            \n
+                            <li><a href="/otn/queryOrder/init" shape="rect">已完成订单(改/退)</a>\n</li>
+                            \n
+                            <li class="nav-line"></li>
+                            \n
+                            <li><a href="https://exservice.12306.cn/excater/queryMyOrder.html"
+                                   shape="rect">我的餐饮•特产</a>\n
+                            </li>
+                            \n
+                            <li><a href="/otn/insurance/init" shape="rect">我的保险</a>\n</li>
+                            \n
+                            <li><a href="https://cx.12306.cn/tlcx/welcome.html" shape="rect">我的会员</a>\n</li>
+                            \n
+                            <li class="nav-line"></li>
+                            \n
+                            <li><a href="/otn/modifyUser/initQueryUserInfo" shape="rect">查看个人信息</a>\n</li>
+                            \n
+                            <li><a href="/otn/userSecurity/init" shape="rect">账户安全</a>\n</li>
+                            \n
+                            <li class="nav-line"></li>
+                            \n
+                            <li><a href="/otn/passengers/init" shape="rect">乘车人</a>\n</li>
+                            \n
+                            <li class="nav-line"></li>
+                            \n
+                            <li><a href="/otn/icentre/serviceQuery" shape="rect">温馨服务查询</a>\n</li>
+                            \n
+                        </ul>
+                        \n
+                    </li>
+                    \n
+                    <li class="menu-item menu-line">|</li>
+                    \n
+                    <li id="J-header-login" class="menu-item menu-login">\n 您好，请<a id="login_user"
+                                                                                      href="/otn/login/init"
+                                                                                      shape="rect">登录</a>\n<a
+                            id="regist_out" href="/otn/regist/init" class="ml" shape="rect">免费注册</a>\n
+                    </li>
+                    \n
+                </ul>
+                \n
+            </div>
+            \n
+        </div>
+        \n
+    </div>
+    \n<!-- 导航 --> \n
+    <div class="nav-box">
+        <ul class="nav">
+            <li class="nav-item nav-item-w1 active"><a href="../../index.html" class="nav-hd" shape="rect">首页</a>\n
+            </li>
+            \n
+            <li class="nav-item nav-item-w1"><a href="javascript:void(0)" class="nav-hd" shape="rect">车票\n <i
+                    class="icon icon-down"></i>\n</a>\n
+                <div class="nav-bd">
+                    <div class="nav-bd-item nav-col2"><h3 class="nav-tit">购买</h3>\n
+                        <ul class="nav-con">
+                            <li><a href="/otn/leftTicket/init?linktypeid=dc" shape="rect">单程</a>\n</li>
+                            \n
+                            <li><a href="/otn/leftTicket/init?linktypeid=wf" shape="rect">往返</a>\n</li>
+                            \n
+                            <li><a href="/otn/lcQuery/init" shape="rect">中转换乘</a>\n</li>
+                            \n
+                            <li></li>
+                            \n
+                        </ul>
+                        \n
+                    </div>
+                    \n
+                    <div class="nav-bd-item nav-col2"><h3 class="nav-tit">变更</h3>\n
+                        <ul class="nav-con">
+                            <li><a href="/otn/queryOrder/init?linktypeid=ref" shape="rect">退票</a>\n</li>
+                            \n
+                            <li><a href="/otn/queryOrder/init?linktypeid=res" shape="rect">改签</a>\n</li>
+                            \n
+                            <li><a href="/otn/queryOrder/init?linktypeid=chg" shape="rect">变更到站</a>\n</li>
+                            \n
+                            <li></li>
+                            \n
+                        </ul>
+                        \n
+                    </div>
+                    \n
+                    <div class="nav-bd-item nav-col2"><h3 class="nav-tit border-none">更多</h3>\n
+                        <ul class="nav-con">
+                            <li><a href="javascript:void(0)" shape="rect">中铁银通卡</a>\n</li>
+                            \n
+                            <li class="border-none"><a href=" javascript:void(0) " shape="rect">广九直通车</a>\n</li>
+                            \n
+                            <li><a href="javascript:void(0) " shape="rect">市郊快速铁路</a>\n</li>
+                            \n
+                            <li><a href="../ticket/international_train.html" shape="rect">国际列车</a>\n</li>
+                            \n
+                        </ul>
+                        \n
+                    </div>
+                    \n
+                </div>
+                \n
+            </li>
+            \n
+            <li class="nav-item "><a href="javascript:void(0) " class="nav-hd " shape="rect">团购服务\n <i
+                    class="icon icon-down "></i>\n</a>\n
+                <div class="nav-bd ">
+                    <div class="nav-bd-item nav-col6 ">
+                        <ul class="nav-con ">
+                            <li><a href="https://travel.12306.cn/portal " shape="rect">旅游列车</a>\n</li>
+                            \n
+                            <li><a href="javascript:void(0) " shape="rect">团体办理</a>\n</li>
+                            \n
+                        </ul>
+                        \n
+                    </div>
+                    \n
+                </div>
+                \n
+            </li>
+            \n
+            <li class="nav-item "><a href="javascript:void(0) " class="nav-hd " shape="rect">会员服务\n <i
+                    class="icon icon-down "></i>\n</a>\n
+                <div class="nav-bd ">
+                    <div class="nav-bd-item nav-col6">
+                        <ul class="nav-con ">
+                            <li><a href="https://cx.12306.cn/tlcx/index.html " shape="rect">会员管理</a>\n</li>
+                            \n
+                            <li><a href="https://cx.12306.cn/tlcx/index.html " shape="rect">积分账户</a>\n</li>
+                            \n
+                            <li><a href="https://cx.12306.cn/tlcx/index.html " shape="rect">积分兑换</a>\n</li>
+                            \n
+                            <li><a href="https://cx.12306.cn/tlcx/index.html " shape="rect">会员专享</a>\n</li>
+                            \n
+                            <li class="border-none "><a href="https://cx.12306.cn/tlcx/index.html "
+                                                        shape="rect">会员中心</a>\n
+                            </li>
+                            \n
+                        </ul>
+                        \n
+                    </div>
+                    \n
+                </div>
+                \n
+            </li>
+            \n
+            <li class="nav-item "><a href="javascript:void(0) " class="nav-hd " shape="rect">站车服务\n <i
+                    class="icon icon-down "></i>\n</a>\n
+                <div class="nav-bd ">
+                    <div class="nav-bd-item nav-col4 ">
+                        <ul class="nav-con ">
+                            <li><a href="https://kyfw.12306.cn/otn/index/init " shape="rect">共享汽车</a>\n</li>
+                            \n
+                            <li><a href="https://kyfw.12306.cn/otn/index/init " shape="rect">网络约车</a>\n</li>
+                            \n
+                            <li><a href="https://kyfw.12306.cn/otn/lcQuery/init " shape="rect">行李搬运</a>\n</li>
+                            \n
+                            <li><a href="https://kyfw.12306.cn/otn/lcQuery/init " shape="rect">行包托运</a>\n</li>
+                            \n
+                            <li><a href="https://kyfw.12306.cn/otn/lcQuery/init " shape="rect">定制接送</a>\n</li>
+                            \n
+                            <li><a href="javascript:; " shape="rect">随手寄</a>\n</li>
+                            \n
+                            <li><a href="javascript:; " shape="rect">随手送</a>\n</li>
+                            \n
+                            <li></li>
+                            \n
+                        </ul>
+                        \n
+                    </div>
+                    \n
+                    <div class="nav-bd-item ">
+                        <ul class="nav-con ">
+                            <li><a href="/otn/icentre/qxyyInfo" shape="rect">重点旅客预约</a>\n</li>
+                            \n
+                            <li><a href="/otn/icentre/lostInfo" shape="rect">遗失物品查找</a>\n</li>
+                            \n
+                        </ul>
+                        \n
+                    </div>
+                    \n
+                    <div class="nav-bd-item ">
+                        <ul class="nav-con ">
+                            <li><a href="javascript:; " shape="rect">车站引导</a>\n</li>
+                            \n
+                            <li><a href="javascript:; " shape="rect">站车风采</a>\n</li>
+                            \n
+                        </ul>
+                        \n
+                    </div>
+                    \n
+                </div>
+                \n
+            </li>
+            \n
+            <li class="nav-item "><a href="javascript:void(0) " class="nav-hd " shape="rect">商旅服务\n <i
+                    class="icon icon-down "></i>\n</a>\n
+                <div class="nav-bd ">
+                    <div class="nav-bd-item nav-col6 ">
+                        <ul class="nav-con ">
+                            <li><a href="javascript:void(0) " shape="rect">热点推荐</a>\n</li>
+                            \n
+                            <li><a href="https://travel.12306.cn/portal" shape="rect">旅游</a>\n</li>
+                            \n
+                            <li><a href="https://kyfw.12306.cn/otn/insurance/init" shape="rect">保险</a>\n</li>
+                            \n
+                            <li class="border-none "><a href="javascript:; " shape="rect">合作联盟</a>\n</li>
+                            \n
+                        </ul>
+                        \n
+                    </div>
+                    \n
+                </div>
+                \n
+            </li>
+            \n
+            <li class="nav-item "><a href="javascript:void(0) " class="nav-hd " shape="rect">出行指南\n <i
+                    class="icon icon-down "></i>\n</a>\n
+                <div class="nav-bd ">
+                    <div class="nav-bd-item nav-col2 "><h3 class="nav-tit ">常见问题</h3>\n
+                        <ul class="nav-con ">
+                            <li><a href="https://kyfw.12306.cn/otn/gonggao/ticketType.html " shape="rect">车票</a>\n
+                            </li>
+                            \n
+                            <li><a href="https://kyfw.12306.cn/otn/gonggao/ticketWindow.html " shape="rect">购票</a>\n
+                            </li>
+                            \n
+                            <li><a href="https://kyfw.12306.cn/otn/gonggao/windowEndorse.html "
+                                   shape="rect">改签、变更到站</a>\n
+                            </li>
+                            \n
+                            <li><a href="https://kyfw.12306.cn/otn/gonggao/windowRefund.html " shape="rect">退票</a>\n
+                            </li>
+                            \n
+                            <li><a href="https://kyfw.12306.cn/otn/gonggao/help.html " class="txt-lighter "
+                                   shape="rect">更多>></a>\n
+                            </li>
+                            \n
+                            <li></li>
+                            \n
+                        </ul>
+                        \n
+                    </div>
+                    \n
+                    <div class="nav-bd-item nav-col2 "><h3 class="nav-tit ">旅客须知</h3>\n
+                        <ul class="nav-con ">
+                            <li><a href="https://kyfw.12306.cn/otn/gonggao/usersNeedToKnow.html?linktypeid=reg "
+                                   shape="rect">注册新用户</a>\n
+                            </li>
+                            \n
+                            <li><a href="https://kyfw.12306.cn/otn/gonggao/usersNeedToKnow.html?linktypeid=reg "
+                                   shape="rect">网上购票流程</a>\n
+                            </li>
+                            \n
+                            <li><a href="https://kyfw.12306.cn/otn/gonggao/usersNeedToKnow.html?linktypeid=reg "
+                                   shape="rect">铁路电子客票</a>\n
+                            </li>
+                            \n
+                            <li><a href="https://kyfw.12306.cn/otn/gonggao/usersNeedToKnow.html?linktypeid=reg "
+                                   shape="rect">身份核验</a>\n
+                            </li>
+                            \n
+                            <li><a href="https://kyfw.12306.cn/otn/gonggao/help.html " class="txt-lighter "
+                                   shape="rect">更多>></a>\n
+                            </li>
+                            \n
+                            <li></li>
+                            \n
+                        </ul>
+                        \n
+                    </div>
+                    \n
+                    <div class="nav-bd-item nav-col2 "><h3 class="nav-tit border-none ">相关章程</h3>\n
+                        <ul class="nav-con ">
+                            <li><a href="https://kyfw.12306.cn/otn/gonggao/saleTicketMeans.html?linktypeid=means1 "
+                                   shape="rect">铁路互联网暂行方法</a>\n
+                            </li>
+                            \n
+                            <li class="border-none "><a
+                                    href="https://kyfw.12306.cn/otn/gonggao/saleTicketMeans.html?linktypeid=means1 "
+                                    shape="rect">铁路旅客运输规程</a>\n
+                            </li>
+                            \n
+                            <li><a href="https://kyfw.12306.cn/otn/gonggao/saleTicketMeans.html?linktypeid=means1 "
+                                   shape="rect">铁路进站乘车禁止和限制携带品公告</a>\n
+                            </li>
+                            \n
+                            <li class="border-none "><a href="https://kyfw.12306.cn/otn/gonggao/help.html "
+                                                        class="txt-lighter " shape="rect">更多>></a>\n
+                            </li>
+                            \n
+                            <li></li>
+                            \n
+                            <li class="border-none "></li>
+                            \n
+                        </ul>
+                        \n
+                    </div>
+                    \n
+                </div>
+                \n
+            </li>
+            \n
+            <li class="nav-item last "><a href="javascript:void(0) " class="nav-hd " shape="rect">信息查询\n <i
+                    class="icon icon-down "></i>\n</a>\n
+                <div class="nav-bd ">
+                    <div class="nav-bd-item nav-col5 "><h3 class="nav-tit border-none ">常用查询</h3>\n
+                        <ul class="nav-con ">
+                            <li><a href="https://kyfw.12306.cn/otn/zwdch/init " shape="rect">正晚点</a>\n</li>
+                            \n
+                            <li><a href="https://kyfw.12306.cn/otn/leftTicket/init " shape="rect">时刻表</a>\n</li>
+                            \n
+                            <li><a href="javascript:void(0) " shape="rect">公布票价</a>\n</li>
+                            \n
+                            <li><a href="../infos/ticket_check.html " shape="rect">检票口</a>\n</li>
+                            \n
+                            <li><a href="../infos/sale_time.html " shape="rect">起售时间</a>\n</li>
+                            \n
+                            <li><a href="../infos/weather.html " shape="rect">天气</a>\n</li>
+                            \n
+                            <li><a href="javascript:void(0) " shape="rect">交通查询</a>\n</li>
+                            \n
+                            <li><a href="https://kyfw.12306.cn/otn/queryAgencySellTicket/init " shape="rect">代售点</a>\n
+                            </li>
+                            \n
+                            <li><a href="../infos/service_number.html" shape="rect">客服电话</a>\n</li>
+                            \n
+                            <li></li>
+                            \n
+                        </ul>
+                        \n
+                    </div>
+                    \n
+                    <div class="nav-bd-item ">
+                        <ul class="nav-con nav-con-pt nav-con-tits ">
+                            <li class="border-none"><a
+                                    href="http://www.12306.cn/mormhweb/zxdt/201512/t20151201_3949.html"
+                                    shape="rect">公告</a>\n
+                            </li>
+                            \n
+                            <li class="border-none"><a href=" http://dynamic.12306.cn/otn/queryDishonest/init "
+                                                       shape="rect">信用信息</a>\n
+                            </li>
+                            \n
+                        </ul>
+                        \n
+                    </div>
+                    \n
+                </div>
+                \n
+            </li>
+            \n
+        </ul>
+        \n
+    </div>
+    \n
+</div>
+\n
+<div class="content">
+    <div class="pay-wait"><span class="icon" style="margin-left:50px;"><img src="/otn/resources/images/working.gif"/>\n</span>\n<strong
+            style="padding-top:16px;">页面加载中，请稍候...</strong>\n
+    </div>
+    \n
+    <script xml:space="preserve">\nwindow.onload = function () {\n\tuampassport.checkLogin();\n
+    } \n</script>
+    \n
+</div>
+\n
+<!--\n<div class="guide-nav" id="guid_nav" th:fragment="guide-frag">\n\t<ul>\n\t\t<li><a th:href="${#httpServletRequest.contextPath}+\'/lcxxcx/init\'" href="列车信息查询.html" class="cur">票价查询</a></li>\n\t\t<li><a th:href="${#httpServletRequest.contextPath}+\'/czxx/init\'" href="车站信息查询.html">车站信息查询</a></li>\n\t\t<li><a th:href="${#httpServletRequest.contextPath}+\'/zzzcx/init\'" href="#">中转查询</a></li>\n\t\t<li><a th:href="${#httpServletRequest.contextPath}+\'/zwdch/init\'" href="#nogo">正晚点查询</a></li>\n\t\t<li class="last"><a th:href="${#httpServletRequest.contextPath}+\'/queryAgencySellTicket/init\'" href="客票代售点.html">客票代售点</a></li>\n\t</ul>\n</div>\n-->
+\n
+<div class="footer">
+    <div class="footer-con wrapper">
+        <div class="foot-links"><h2 class="foot-con-tit">友情链接</h2>\n
+            <ul class="foot-links-list">
+                <li><a href="javascript:void(0)" shape="rect"><img src="/otn/resources/images/12306_index/link01.png"
+                                                                   alt=""/>\n</a>\n
+                </li>
+                \n
+                <li><a href="javascript:void(0)" shape="rect"><img src="/otn/resources/images/12306_index/link02.png"
+                                                                   alt=""/>\n</a>\n
+                </li>
+                \n
+                <li><a href="javascript:void(0)" shape="rect"><img src="/otn/resources/images/12306_index/link03.png"
+                                                                   alt=""/>\n</a>\n
+                </li>
+                \n
+                <li><a href="javascript:void(0)" shape="rect"><img src="/otn/resources/images/12306_index/link04.png"
+                                                                   alt=""/>\n</a>\n
+                </li>
+                \n
+            </ul>
+            \n
+        </div>
+        \n
+        <ul class="foot-code">
+            <li><h2 class="foot-con-tit">12306 公众号</h2>\n<img src="/otn/resources/images/12306_index/pic/code.png"
+                                                                 class="code-pic" alt=""/>\n
+                <div class="code-txt">扫一扫,出行及时提醒</div>
+                \n
+            </li>
+            \n
+            <li><h2 class="foot-con-tit">12306 APP</h2>\n<img src="/otn/resources/images/12306_index/pic/code.png"
+                                                              class="code-pic" alt=""/>\n
+                <div class="code-txt">官方唯一指定下载</div>
+                \n
+            </li>
+            \n
+        </ul>
+        \n
+    </div>
+    \n
+    <div class="footer-txt"><p><span class="mr">版权所有©2008-2019</span>\n<span
+            class="mr">中国铁道科学研究院集团有限公司</span>\n<span
+            class="mr">京ICP备05020493号-3 | 京ICP证150437号</span>\n</p>\n
+    </div>
+    \n
+</div>
+\n
+</html>\n', 'repeat_submit_token': ''

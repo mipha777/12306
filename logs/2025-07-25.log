@@ -1,0 +1,314 @@
+2025-07-25 18:03:51,328 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 18:03:51,328 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 18:04:12,830 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-25 18:04:12,831 - INFO - 12306Spider - 登录成功，cookie 已保存。
+2025-07-25 18:04:15,142 - ERROR - 12306Spider - Main execution failed: [Errno 2] No such file or directory: 'E:\\py\\12306抢票\\cookies\\16650000702.json'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 58, in main
+    ticket_buyer.ensure_user_login()
+  File "E:\py\12306抢票\core\buy_ticket.py", line 23, in ensure_user_login
+    headers = build_dynamic_headers({
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\headers_utils.py", line 20, in build_dynamic_headers
+    with open(json_path, 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\py\\12306抢票\\cookies\\16650000702.json'
+2025-07-25 18:06:43,411 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 18:06:43,411 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 18:06:43,417 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 18:06:47,828 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 200 OK"
+2025-07-25 18:06:47,829 - INFO - 12306Spider - 订单请求提交第一步成功...
+2025-07-25 18:06:50,582 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 200 OK"
+2025-07-25 18:06:50,602 - ERROR - 12306Spider - 初始化订单确认页面失败
+2025-07-25 18:10:11,147 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 18:10:11,147 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 18:10:27,745 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-25 18:10:27,746 - INFO - 12306Spider - 登录成功，cookie 已保存。
+2025-07-25 18:10:32,044 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 200 OK"
+2025-07-25 18:10:32,049 - INFO - 12306Spider - 订单请求提交第一步成功...
+2025-07-25 18:10:34,829 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 200 OK"
+2025-07-25 18:10:34,838 - ERROR - 12306Spider - 初始化订单确认页面失败
+2025-07-25 18:19:22,164 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 18:19:22,164 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 18:19:22,169 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 18:19:26,478 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 200 OK"
+2025-07-25 18:19:26,482 - INFO - 12306Spider - 订单请求提交第一步成功...
+2025-07-25 18:19:29,258 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 200 OK"
+2025-07-25 18:19:29,291 - ERROR - 12306Spider - 初始化订单确认页面失败
+2025-07-25 18:23:56,550 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 18:23:56,550 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 18:23:56,554 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 18:24:01,176 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 200 OK"
+2025-07-25 18:24:01,180 - INFO - 12306Spider - 订单请求提交第一步成功...
+2025-07-25 18:24:04,039 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 200 OK"
+2025-07-25 18:24:04,045 - ERROR - 12306Spider - 初始化订单确认页面失败
+2025-07-25 18:29:14,167 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 18:29:14,167 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 18:29:14,172 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 18:29:18,549 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 200 OK"
+2025-07-25 18:29:18,557 - INFO - 12306Spider - 订单请求提交第一步成功...
+2025-07-25 18:29:21,326 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 200 OK"
+2025-07-25 18:32:49,146 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 18:32:49,147 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 18:32:49,151 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 18:32:53,687 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 200 OK"
+2025-07-25 18:32:53,690 - INFO - 12306Spider - 订单请求提交第一步成功...
+2025-07-25 18:32:56,525 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 200 OK"
+2025-07-25 19:34:08,289 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:34:08,289 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:34:08,294 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 19:34:12,557 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 302 Moved Temporarily"
+2025-07-25 19:34:12,559 - INFO - 12306Spider - 订单请求提交第一步成功...
+2025-07-25 19:34:15,257 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 302 Moved Temporarily"
+2025-07-25 19:34:20,989 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs "HTTP/1.1 200 OK"
+2025-07-25 19:34:20,992 - ERROR - 12306Spider - Main execution failed: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 99, in main
+    p_str, op_str = build_passenger_strings(config, response_json)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\core\user_info.py", line 48, in build_passenger_strings
+    all_info =  response_json["data"]["normal_passengers"]
+                ~~~~~~~~~~~~~^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2025-07-25 19:41:26,891 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:41:26,891 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:41:26,896 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 19:41:31,882 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 302 Moved Temporarily"
+2025-07-25 19:41:31,885 - ERROR - 12306Spider - 订单请求提交第一步失败
+2025-07-25 19:43:59,580 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:43:59,581 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:43:59,585 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 19:44:04,045 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 302 Moved Temporarily"
+2025-07-25 19:44:04,048 - ERROR - 12306Spider - 订单请求提交第一步失败
+2025-07-25 19:49:12,138 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:49:12,138 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:49:12,144 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 19:49:16,666 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 302 Moved Temporarily"
+2025-07-25 19:49:16,671 - ERROR - 12306Spider - 订单请求提交第一步失败
+2025-07-25 19:49:35,210 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:49:35,210 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:49:35,215 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 19:49:39,887 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 302 Moved Temporarily"
+2025-07-25 19:49:39,898 - ERROR - 12306Spider - 订单请求提交第一步失败
+2025-07-25 19:49:49,830 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:49:49,830 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:49:49,835 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 19:49:54,462 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 302 Moved Temporarily"
+2025-07-25 19:49:54,464 - ERROR - 12306Spider - 订单请求提交第一步失败
+2025-07-25 19:50:08,781 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:50:08,782 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:50:28,532 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-25 19:50:28,533 - INFO - 12306Spider - 登录成功，cookie 已保存。
+2025-07-25 19:50:32,878 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 200 OK"
+2025-07-25 19:50:32,887 - ERROR - 12306Spider - 订单请求提交第一步失败
+2025-07-25 19:52:54,847 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:52:54,847 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:52:54,852 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 19:52:59,277 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 200 OK"
+2025-07-25 19:52:59,287 - INFO - 12306Spider - 订单初步请求成功
+2025-07-25 19:53:02,376 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 200 OK"
+2025-07-25 19:53:09,241 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs "HTTP/1.1 200 OK"
+2025-07-25 19:53:09,245 - ERROR - 12306Spider - Main execution failed: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 103, in main
+    p_str, op_str = build_passenger_strings(config, response_json)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\core\user_info.py", line 48, in build_passenger_strings
+    all_info =  response_json["data"]["normal_passengers"]
+                ~~~~~~~~~~~~~^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2025-07-25 19:56:47,392 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:56:47,392 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 19:56:47,397 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 19:56:51,871 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 200 OK"
+2025-07-25 19:56:51,875 - INFO - 12306Spider - 订单初步请求成功
+2025-07-25 19:56:54,730 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 200 OK"
+2025-07-25 19:57:00,587 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs "HTTP/1.1 200 OK"
+2025-07-25 21:16:10,726 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 21:16:10,726 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 21:16:10,732 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 21:16:14,986 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 302 Moved Temporarily"
+2025-07-25 21:16:14,994 - ERROR - 12306Spider - 订单请求提交第一步失败
+2025-07-25 21:16:37,591 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 21:16:37,591 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 21:16:53,338 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-25 21:16:53,339 - INFO - 12306Spider - 登录成功，cookie 已保存。
+2025-07-25 21:16:57,570 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 200 OK"
+2025-07-25 21:16:57,571 - INFO - 12306Spider - 订单初步请求成功
+2025-07-25 21:17:00,967 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 200 OK"
+2025-07-25 21:17:07,732 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs "HTTP/1.1 200 OK"
+2025-07-25 21:17:13,551 - ERROR - 12306Spider - Main execution failed: 'bool' object has no attribute 'get'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 123, in main
+    order_seq = result.get('orderId')
+                ^^^^^^^^^^
+AttributeError: 'bool' object has no attribute 'get'
+2025-07-25 21:41:56,537 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 21:41:56,537 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 21:41:56,542 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 21:41:58,551 - ERROR - 12306Spider - Main execution failed: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 46, in main
+    print(len(tickets))
+          ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-07-25 21:46:35,922 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 21:46:35,922 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 21:46:35,926 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 21:46:37,936 - ERROR - 12306Spider - Main execution failed: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 46, in main
+    print(len(tickets))
+          ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-07-25 21:47:03,880 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 21:47:03,880 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 21:47:19,635 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-25 21:47:19,635 - INFO - 12306Spider - 登录成功，cookie 已保存。
+2025-07-25 21:47:21,640 - ERROR - 12306Spider - Main execution failed: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 46, in main
+    print(len(tickets))
+          ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-07-25 21:50:24,131 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 21:50:26,519 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 21:53:59,121 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 22:01:51,172 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:01:51,172 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:01:51,177 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 22:01:53,180 - ERROR - 12306Spider - Main execution failed: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 46, in main
+    print(len(tickets))
+          ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-07-25 22:02:08,637 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:02:08,638 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:02:08,654 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 22:05:48,802 - ERROR - 12306Spider - Main execution failed: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 46, in main
+    print(len(tickets))
+          ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-07-25 22:07:34,017 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:07:34,017 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:07:34,018 - ERROR - 12306Spider - Main execution failed: name 'date' is not defined
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 35, in main
+    session_manager, train_date, back_train_date, from_station, to_station = cookie_manager(config)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\cookie_manager.py", line 26, in cookie_manager
+    back_train_date = date.today().strftime("%Y-%m-%d")  # ✅ 转为字符串
+                      ^^^^
+NameError: name 'date' is not defined
+2025-07-25 22:08:03,987 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:08:03,987 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:08:03,992 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 22:08:08,332 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 200 OK"
+2025-07-25 22:08:08,335 - INFO - 12306Spider - 订单初步请求成功
+2025-07-25 22:08:10,544 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 200 OK"
+2025-07-25 22:08:12,047 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs "HTTP/1.1 200 OK"
+2025-07-25 22:28:42,157 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:28:42,157 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:28:42,162 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 22:28:42,163 - ERROR - 12306Spider - Main execution failed: cannot unpack non-iterable TicketQuerier object
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 37, in main
+    query,from_station_code = TicketQuerier(session_manager=session_manager)
+    ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable TicketQuerier object
+2025-07-25 22:29:05,524 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:29:05,524 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:29:05,528 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 22:30:18,549 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:30:18,549 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:30:18,554 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 22:41:03,850 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:41:03,850 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:41:03,854 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 22:41:07,501 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 302 Moved Temporarily"
+2025-07-25 22:41:07,504 - ERROR - 12306Spider - 订单请求提交第一步失败
+2025-07-25 22:52:02,767 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:52:02,767 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:52:33,234 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-25 22:52:33,235 - INFO - 12306Spider - 登录成功，cookie 已保存。
+2025-07-25 22:52:36,363 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 302 Moved Temporarily"
+2025-07-25 22:52:36,367 - ERROR - 12306Spider - 订单请求提交第一步失败
+2025-07-25 22:52:36,367 - ERROR - 12306Spider - Main execution failed: name 'os' is not defined
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 76, in main
+    cookies_clean()
+  File "E:\py\12306抢票\utils\clean_cookies.py", line 16, in cookies_clean
+    if os.path.exists(file):
+       ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'
+2025-07-25 22:54:53,464 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:54:53,464 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 22:55:07,244 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-25 22:55:07,245 - INFO - 12306Spider - 登录成功，cookie 已保存。
+2025-07-25 22:55:10,685 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 200 OK"
+2025-07-25 22:55:10,687 - INFO - 12306Spider - 订单初步请求成功
+2025-07-25 22:55:12,274 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 200 OK"
+2025-07-25 22:55:13,771 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs "HTTP/1.1 200 OK"
+2025-07-25 23:06:58,501 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 23:06:58,502 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 23:06:58,506 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 23:07:01,773 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 302 Moved Temporarily"
+2025-07-25 23:07:01,782 - ERROR - 12306Spider - 订单请求提交第一步失败
+2025-07-25 23:10:52,934 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 23:10:52,934 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 23:11:03,481 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-25 23:11:03,481 - INFO - 12306Spider - 登录成功，cookie 已保存。
+2025-07-25 23:11:06,722 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 200 OK"
+2025-07-25 23:11:06,731 - INFO - 12306Spider - 订单初步请求成功
+2025-07-25 23:11:08,358 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 200 OK"
+2025-07-25 23:11:09,846 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs "HTTP/1.1 200 OK"
+2025-07-25 23:11:11,262 - ERROR - 12306Spider - Main execution failed: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 119, in main
+    if status.get('orderStatus') == 'success':
+       ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-07-25 23:49:06,568 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 23:49:06,568 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 23:49:06,572 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 23:49:06,887 - ERROR - 12306Spider - Main execution failed: name 'cookies' is not defined
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 82, in main
+    dc_html_json = ticket_buyer.init_dc(cookies=cookies)
+                                                ^^^^^^^
+NameError: name 'cookies' is not defined
+2025-07-25 23:49:21,684 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 23:49:21,685 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 23:49:21,689 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 23:49:22,850 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 302 Moved Temporarily"
+2025-07-25 23:49:23,587 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs "HTTP/1.1 200 OK"
+2025-07-25 23:49:23,592 - ERROR - 12306Spider - Main execution failed: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 92, in main
+    p_str, op_str = build_passenger_strings(config, response_json)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\core\user_info.py", line 49, in build_passenger_strings
+    for passenger_info in all_info:
+TypeError: 'NoneType' object is not iterable
+2025-07-25 23:50:10,793 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 23:50:10,794 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 23:50:24,523 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-25 23:50:24,524 - INFO - 12306Spider - 登录成功，cookie 已保存。
+2025-07-25 23:50:26,663 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 200 OK"
+2025-07-25 23:50:27,555 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs "HTTP/1.1 200 OK"
+2025-07-25 23:59:30,781 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 23:59:30,781 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-25 23:59:30,784 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-25 23:59:31,978 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 302 Moved Temporarily"
+2025-07-25 23:59:32,708 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs "HTTP/1.1 200 OK"
+2025-07-25 23:59:32,713 - ERROR - 12306Spider - Main execution failed: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 92, in main
+    p_str, op_str = build_passenger_strings(config, response_json)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\core\user_info.py", line 49, in build_passenger_strings
+    for passenger_info in all_info:
+TypeError: 'NoneType' object is not iterable

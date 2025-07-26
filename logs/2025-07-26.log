@@ -1,0 +1,201 @@
+2025-07-26 00:23:44,294 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 00:23:44,294 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 00:23:44,298 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-26 00:23:45,441 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 302 Moved Temporarily"
+2025-07-26 00:24:19,289 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 00:24:19,290 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 00:24:27,668 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-26 00:24:27,668 - INFO - 12306Spider - 登录成功，cookie 已保存。
+2025-07-26 00:24:29,056 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 200 OK"
+2025-07-26 00:32:31,612 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 00:32:31,613 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 00:32:31,618 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-26 00:32:33,673 - ERROR - 12306Spider - Main execution failed: cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 39, in main
+    tickets,from_station_code = query.lookfor(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+2025-07-26 00:33:28,181 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 00:33:28,181 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 00:33:33,857 - ERROR - 12306Spider - Main execution failed: cannot access local variable 'cookies_dict' where it is not associated with a value
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 35, in main
+    session_manager, train_date, back_train_date, from_station, to_station = cookie_manager(config)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\cookie_manager.py", line 34, in cookie_manager
+    if session_manager.load_cookies():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\core\session_manager.py", line 63, in load_cookies
+    else:login.login_handler()
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\login.py", line 109, in login_handler
+    login_success, browser_cookies = loop.run_until_complete(main())
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\asyncio\base_events.py", line 664, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\login.py", line 100, in main
+    return True, cookies_dict  # 表示登录成功，返回 cookie 字典
+                 ^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'cookies_dict' where it is not associated with a value
+2025-07-26 00:34:08,202 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 00:34:08,202 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 00:34:11,723 - ERROR - 12306Spider - Main execution failed: cannot access local variable 'cookies_dict' where it is not associated with a value
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 35, in main
+    session_manager, train_date, back_train_date, from_station, to_station = cookie_manager(config)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\cookie_manager.py", line 34, in cookie_manager
+    if session_manager.load_cookies():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\core\session_manager.py", line 63, in load_cookies
+    else:login.login_handler()
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\login.py", line 109, in login_handler
+    login_success, browser_cookies = loop.run_until_complete(main())
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\asyncio\base_events.py", line 664, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\login.py", line 100, in main
+    return True, cookies_dict  # 表示登录成功，返回 cookie 字典
+                 ^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'cookies_dict' where it is not associated with a value
+2025-07-26 00:34:57,074 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 00:34:57,074 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 00:35:07,011 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-26 00:35:07,012 - INFO - 12306Spider - 登录成功，cookie 已保存。
+2025-07-26 00:35:09,247 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 200 OK"
+2025-07-26 00:35:45,564 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 00:35:45,564 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 00:35:45,569 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-26 00:35:46,856 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 200 OK"
+2025-07-26 01:03:13,946 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:03:13,946 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:03:13,952 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-26 01:08:31,729 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:08:31,730 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:08:31,734 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-26 01:10:29,062 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:10:29,062 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:10:29,067 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-26 01:15:04,687 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:15:04,687 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:15:04,691 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-26 01:15:50,107 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:15:50,107 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:15:50,112 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-26 01:16:44,781 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:16:44,781 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:16:44,786 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-26 01:16:46,064 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 302 Moved Temporarily"
+2025-07-26 01:17:44,090 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:17:44,090 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:17:44,094 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-26 01:17:45,307 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 302 Moved Temporarily"
+2025-07-26 01:18:15,268 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:18:15,268 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:18:15,273 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-26 01:18:16,439 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 302 Moved Temporarily"
+2025-07-26 01:20:41,934 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:20:41,934 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:20:55,599 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-26 01:20:55,600 - INFO - 12306Spider - 登录成功，cookie 已保存。
+2025-07-26 01:20:57,422 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 302 Moved Temporarily"
+2025-07-26 01:26:52,472 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:26:52,473 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:26:52,477 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-26 01:26:53,681 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 302 Moved Temporarily"
+2025-07-26 01:27:20,108 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:27:20,108 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:27:27,761 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-26 01:27:27,762 - INFO - 12306Spider - 登录成功，cookie 已保存。
+2025-07-26 01:27:29,635 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/confirmPassenger/initDc "HTTP/1.1 302 Moved Temporarily"
+2025-07-26 01:50:42,062 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:50:42,062 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:50:42,064 - ERROR - 12306Spider - Main execution failed: 'train_info'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 35, in main
+    train_time_true = config["train_info"]["train_time_true"]
+                      ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'train_info'
+2025-07-26 01:50:54,046 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 01:50:54,047 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:09:52,705 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:09:52,705 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:09:52,707 - ERROR - 12306Spider - Main execution failed: name 'datetime' is not defined
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 37, in main
+    start_time = datetime.strptime(time_str, "%H:%M:%S")
+                 ^^^^^^^^
+NameError: name 'datetime' is not defined. Did you forget to import 'datetime'
+2025-07-26 02:10:14,763 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:10:14,763 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:10:14,764 - ERROR - 12306Spider - Main execution failed: name 'time_str' is not defined
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 38, in main
+    start_time = datetime.strptime(time_str, "%H:%M:%S")
+                                   ^^^^^^^^
+NameError: name 'time_str' is not defined
+2025-07-26 02:11:13,321 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:11:13,321 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:11:13,322 - ERROR - 12306Spider - Main execution failed: 'str' object has no attribute 'time'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 42, in main
+    new_time_str = start_time.strftime("%H:%M:%S").time()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'time'
+2025-07-26 02:11:35,713 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:11:35,713 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:11:35,715 - ERROR - 12306Spider - Main execution failed: unsupported operand type(s) for -: 'datetime.time' and 'datetime.timedelta'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 40, in main
+    start_time = start_time - timedelta(minutes=3)
+                 ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'datetime.time' and 'datetime.timedelta'
+2025-07-26 02:11:45,214 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:11:45,214 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:11:45,216 - ERROR - 12306Spider - Main execution failed: 'str' object has no attribute 'time'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 42, in main
+    new_time_str = start_time.strftime("%H:%M:%S").time()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'time'
+2025-07-26 02:12:39,646 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:12:39,646 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:12:39,648 - ERROR - 12306Spider - Main execution failed: '>=' not supported between instances of 'datetime.time' and 'str'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 45, in main
+    if now >= new_time_str:
+       ^^^^^^^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'datetime.time' and 'str'
+2025-07-26 02:14:39,173 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:14:39,174 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:16:11,344 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:16:11,344 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:16:29,190 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:16:29,190 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:17:40,698 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:17:40,698 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:18:03,012 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-26 02:18:03,257 - ERROR - 12306Spider - Main execution failed: name 'ticket' is not defined
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 81, in main
+    secret_str=ticket['secretStr'],
+               ^^^^^^
+NameError: name 'ticket' is not defined. Did you mean: 'tickets'?
+2025-07-26 02:19:35,263 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:19:35,263 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:19:38,270 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-26 02:19:38,503 - ERROR - 12306Spider - Main execution failed: list indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 86, in main
+    bed_level_info=filtered_tickets['bed_level_info'],
+                   ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+2025-07-26 02:19:50,706 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:19:50,707 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-26 02:19:53,713 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-26 02:19:54,801 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 302 Moved Temporarily"
+2025-07-26 02:19:54,804 - ERROR - 12306Spider - 订单请求提交第一步失败

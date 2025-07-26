@@ -1,0 +1,529 @@
+2025-07-24 16:16:27,738 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!
+2025-07-24 16:16:27,738 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 16:16:27,744 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 16:16:31,746 - ERROR - 12306Spider - Main execution failed: name 'ticket_config' is not defined
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 40, in main
+    from_station_name=ticket_config['from_station'],
+                      ^^^^^^^^^^^^^
+NameError: name 'ticket_config' is not defined
+2025-07-24 16:17:21,515 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!
+2025-07-24 16:17:21,515 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 16:17:21,520 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 16:17:35,636 - ERROR - 12306Spider - Main execution failed: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 44, in main
+    print(len(tickets))
+          ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-07-24 16:38:19,289 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!
+2025-07-24 16:38:19,289 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 16:38:19,294 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 16:38:23,339 - ERROR - 12306Spider - Main execution failed: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 44, in main
+    print(len(tickets))
+          ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-07-24 16:41:04,060 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!
+2025-07-24 16:41:04,060 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 16:41:04,065 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 16:41:18,191 - ERROR - 12306Spider - Main execution failed: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 44, in main
+    print(len(tickets))
+          ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-07-24 16:43:31,892 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!
+2025-07-24 16:43:31,892 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 16:43:31,897 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 16:43:46,050 - ERROR - 12306Spider - Main execution failed: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 44, in main
+    print(len(tickets))
+          ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-07-24 16:46:26,435 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!
+2025-07-24 16:46:26,436 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 16:46:26,440 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 16:46:30,480 - ERROR - 12306Spider - Main execution failed: unhashable type: 'dict'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 39, in main
+    tickets = query.lookfor(
+              ^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\core\lookfor_ticket.py", line 94, in lookfor
+    headers = build_dynamic_headers({
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\headers_utils.py", line 44, in build_dynamic_headers
+    headers = {
+              ^
+TypeError: unhashable type: 'dict'
+2025-07-24 16:46:55,370 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!
+2025-07-24 16:46:55,370 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 16:46:55,374 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 16:47:11,241 - ERROR - 12306Spider - Main execution failed: expected string or bytes-like object, got 'dict'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 80, in main
+    RepeatSubmitToken = extract_repeat_submit_token(dc_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\token_parser.py", line 6, in extract_repeat_submit_token
+    match = re.search(r"globalRepeatSubmitToken\s*=\s*'(.+?)'", html_text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\re\__init__.py", line 177, in search
+    return _compile(pattern, flags).search(string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'dict'
+2025-07-24 16:48:42,578 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!
+2025-07-24 16:48:42,578 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 16:48:42,583 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 16:48:48,503 - ERROR - 12306Spider - Main execution failed: expected string or bytes-like object, got 'dict'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 80, in main
+    RepeatSubmitToken = extract_repeat_submit_token(dc_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\token_parser.py", line 6, in extract_repeat_submit_token
+    match = re.search(r"globalRepeatSubmitToken\s*=\s*'(.+?)'", html_text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\re\__init__.py", line 177, in search
+    return _compile(pattern, flags).search(string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'dict'
+2025-07-24 16:51:31,241 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!
+2025-07-24 16:51:31,241 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 16:51:31,246 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 16:51:37,049 - ERROR - 12306Spider - Main execution failed: expected string or bytes-like object, got 'dict'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 80, in main
+    RepeatSubmitToken = extract_repeat_submit_token(dc_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\token_parser.py", line 6, in extract_repeat_submit_token
+    match = re.search(r"globalRepeatSubmitToken\s*=\s*'(.+?)'", html_text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\re\__init__.py", line 177, in search
+    return _compile(pattern, flags).search(string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'dict'
+2025-07-24 16:58:26,784 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!
+2025-07-24 16:58:26,785 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 16:58:26,789 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 16:58:32,661 - ERROR - 12306Spider - Main execution failed: expected string or bytes-like object, got 'dict'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 80, in main
+    RepeatSubmitToken = extract_repeat_submit_token(dc_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\token_parser.py", line 6, in extract_repeat_submit_token
+    match = re.search(r"globalRepeatSubmitToken\s*=\s*'(.+?)'", html_text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\re\__init__.py", line 177, in search
+    return _compile(pattern, flags).search(string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'dict'
+2025-07-24 17:10:32,062 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!
+2025-07-24 17:10:32,062 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:10:32,067 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 17:10:37,888 - ERROR - 12306Spider - Main execution failed: expected string or bytes-like object, got 'dict'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 80, in main
+    RepeatSubmitToken = extract_repeat_submit_token(dc_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\token_parser.py", line 6, in extract_repeat_submit_token
+    match = re.search(r"globalRepeatSubmitToken\s*=\s*'(.+?)'", html_text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\re\__init__.py", line 177, in search
+    return _compile(pattern, flags).search(string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'dict'
+2025-07-24 17:30:44,810 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:30:44,810 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:30:44,815 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 17:30:56,943 - ERROR - 12306Spider - Main execution failed: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 44, in main
+    print(len(tickets))
+          ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-07-24 17:32:46,717 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:32:46,717 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:32:46,722 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-24 17:32:46,722 - ERROR - 12306Spider - Main execution failed: name 'login_handler' is not defined
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 34, in main
+    session_manager, train_date, back_train_date, from_station, to_station = cookie_manager(config)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\cookie_manager.py", line 36, in cookie_manager
+    cookies = login_handler()
+              ^^^^^^^^^^^^^
+NameError: name 'login_handler' is not defined
+2025-07-24 17:36:00,384 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:36:00,384 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:36:00,389 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-24 17:36:00,389 - ERROR - 12306Spider - Main execution failed: 'SessionManager' object has no attribute 'login_handler'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 34, in main
+    session_manager, train_date, back_train_date, from_station, to_station = cookie_manager(config)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\cookie_manager.py", line 37, in cookie_manager
+    cookies = session_manager.login_handler()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionManager' object has no attribute 'login_handler'
+2025-07-24 17:37:06,090 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:37:06,091 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:37:06,096 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-24 17:37:06,096 - ERROR - 12306Spider - 登录失败，请检查账号或验证码。
+2025-07-24 17:37:08,140 - ERROR - 12306Spider - Main execution failed: Expecting property name enclosed in double quotes: line 15 column 1 (char 628)
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 39, in main
+    tickets = query.lookfor(
+              ^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\core\lookfor_ticket.py", line 94, in lookfor
+    headers = build_dynamic_headers({
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\headers_utils.py", line 21, in build_dynamic_headers
+    cookies = json.load(f)
+              ^^^^^^^^^^^^
+  File "E:\Python\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 15 column 1 (char 628)
+2025-07-24 17:37:33,403 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:37:33,403 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:37:33,408 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 17:37:45,530 - ERROR - 12306Spider - Main execution failed: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 44, in main
+    print(len(tickets))
+          ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-07-24 17:40:58,794 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:40:58,794 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:40:58,799 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 17:41:10,940 - ERROR - 12306Spider - Main execution failed: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 44, in main
+    print(len(tickets))
+          ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-07-24 17:47:56,465 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:47:56,465 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:47:56,471 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 17:59:44,647 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:59:44,648 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 17:59:44,654 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 17:59:44,655 - ERROR - 12306Spider - Main execution failed: cannot access local variable 'ticket_buyer' where it is not associated with a value
+Traceback (most recent call last):
+  File "e:\py\12306抢票\main.py", line 37, in main
+    if not ticket_buyer.ensure_user_login():
+           ^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'ticket_buyer' where it is not associated with a value
+2025-07-24 18:00:28,092 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 18:00:28,093 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 18:00:28,098 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 18:13:51,189 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 18:13:51,189 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 18:13:51,195 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 18:19:03,129 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 18:19:03,130 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 18:19:03,135 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 18:19:57,030 - ERROR - 12306Spider - Main execution failed: cannot access local variable 'cookies_dict' where it is not associated with a value
+Traceback (most recent call last):
+  File "e:\py\12306抢票\main.py", line 65, in main
+    login_cookies = login_handler()
+                    ^^^^^^^^^^^^^^^
+  File "e:\py\12306抢票\login.py", line 110, in login_handler
+    login_success, browser_cookies = loop.run_until_complete(main())
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\python\Lib\asyncio\base_events.py", line 664, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "e:\py\12306抢票\login.py", line 101, in main
+    return True, cookies_dict  # 表示登录成功，返回 cookie 字典
+                 ^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'cookies_dict' where it is not associated with a value
+2025-07-24 18:20:16,317 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 18:20:16,318 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 18:20:16,323 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 18:40:40,052 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 18:40:40,052 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 18:40:40,057 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 18:41:35,326 - ERROR - 12306Spider - Main execution failed: cannot access local variable 'cookies_dict' where it is not associated with a value
+Traceback (most recent call last):
+  File "e:\py\12306抢票\main.py", line 65, in main
+    login_cookies = login_handler()
+                    ^^^^^^^^^^^^^^^
+  File "e:\py\12306抢票\login.py", line 110, in login_handler
+    login_success, browser_cookies = loop.run_until_complete(main())
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\python\Lib\asyncio\base_events.py", line 664, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "e:\py\12306抢票\login.py", line 101, in main
+    return True, cookies_dict  # 表示登录成功，返回 cookie 字典
+                 ^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'cookies_dict' where it is not associated with a value
+2025-07-24 18:52:39,927 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 18:52:39,927 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 18:52:39,932 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 18:52:52,173 - ERROR - 12306Spider - Main execution failed: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 44, in main
+    print(len(tickets))
+          ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-07-24 19:20:13,205 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 19:20:13,206 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 19:20:13,210 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 19:20:25,322 - ERROR - 12306Spider - Main execution failed: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 44, in main
+    print(len(tickets))
+          ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-07-24 19:21:08,785 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 19:21:08,785 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 19:21:08,789 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 19:21:20,963 - ERROR - 12306Spider - Main execution failed: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 44, in main
+    print(len(tickets))
+          ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-07-24 19:23:15,694 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 19:23:15,694 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 19:23:15,699 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 19:23:17,805 - ERROR - 12306Spider - Main execution failed: object of type 'NoneType' has no len()
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 44, in main
+    print(len(tickets))
+          ^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2025-07-24 19:24:44,618 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 19:24:44,620 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 19:24:44,624 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 19:24:50,416 - ERROR - 12306Spider - Main execution failed: expected string or bytes-like object, got 'dict'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 80, in main
+    RepeatSubmitToken = extract_repeat_submit_token(dc_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\token_parser.py", line 6, in extract_repeat_submit_token
+    match = re.search(r"globalRepeatSubmitToken\s*=\s*'(.+?)'", html_text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\re\__init__.py", line 177, in search
+    return _compile(pattern, flags).search(string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'dict'
+2025-07-24 20:06:01,991 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 20:06:01,992 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 20:06:02,011 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 20:06:08,260 - ERROR - 12306Spider - Main execution failed: expected string or bytes-like object, got 'dict'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 80, in main
+    RepeatSubmitToken = extract_repeat_submit_token(dc_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\token_parser.py", line 6, in extract_repeat_submit_token
+    match = re.search(r"globalRepeatSubmitToken\s*=\s*'(.+?)'", html_text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\re\__init__.py", line 177, in search
+    return _compile(pattern, flags).search(string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'dict'
+2025-07-24 20:06:23,333 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 20:06:24,822 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 20:06:37,596 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 21:17:37,272 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:17:37,272 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:17:37,276 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-24 21:17:37,276 - ERROR - 12306Spider - 登录失败，请检查账号或验证码。
+2025-07-24 21:17:42,898 - ERROR - 12306Spider - Main execution failed: expected string or bytes-like object, got 'dict'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 80, in main
+    RepeatSubmitToken = extract_repeat_submit_token(dc_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\token_parser.py", line 6, in extract_repeat_submit_token
+    match = re.search(r"globalRepeatSubmitToken\s*=\s*'(.+?)'", html_text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\re\__init__.py", line 177, in search
+    return _compile(pattern, flags).search(string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'dict'
+2025-07-24 21:19:42,691 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:19:42,691 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:19:42,709 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 21:19:48,564 - ERROR - 12306Spider - Main execution failed: expected string or bytes-like object, got 'dict'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 80, in main
+    RepeatSubmitToken = extract_repeat_submit_token(dc_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\token_parser.py", line 6, in extract_repeat_submit_token
+    match = re.search(r"globalRepeatSubmitToken\s*=\s*'(.+?)'", html_text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\re\__init__.py", line 177, in search
+    return _compile(pattern, flags).search(string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'dict'
+2025-07-24 21:19:55,166 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:19:55,166 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:23:16,998 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-24 21:33:06,993 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:33:06,993 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:36:08,337 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-24 21:36:08,337 - INFO - 12306Spider - 登录成功，cookie 已保存。
+2025-07-24 21:36:14,349 - ERROR - 12306Spider - Main execution failed: expected string or bytes-like object, got 'dict'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 80, in main
+    RepeatSubmitToken = extract_repeat_submit_token(dc_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\token_parser.py", line 6, in extract_repeat_submit_token
+    match = re.search(r"globalRepeatSubmitToken\s*=\s*'(.+?)'", html_text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\re\__init__.py", line 177, in search
+    return _compile(pattern, flags).search(string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'dict'
+2025-07-24 21:37:13,374 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:37:13,374 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:37:13,379 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 21:37:19,762 - ERROR - 12306Spider - Main execution failed: expected string or bytes-like object, got 'dict'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 80, in main
+    RepeatSubmitToken = extract_repeat_submit_token(dc_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\token_parser.py", line 6, in extract_repeat_submit_token
+    match = re.search(r"globalRepeatSubmitToken\s*=\s*'(.+?)'", html_text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\re\__init__.py", line 177, in search
+    return _compile(pattern, flags).search(string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'dict'
+2025-07-24 21:45:55,775 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:45:55,775 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:45:55,780 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 21:45:57,783 - ERROR - 12306Spider - Main execution failed: SessionManager.update_query_cookies() missing 1 required positional argument: 'back_train_date'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 39, in main
+    tickets = query.lookfor(
+              ^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\core\lookfor_ticket.py", line 81, in lookfor
+    self.sm.update_query_cookies(from_cookie_val, to_cookie_val, train_date)
+TypeError: SessionManager.update_query_cookies() missing 1 required positional argument: 'back_train_date'
+2025-07-24 21:46:34,429 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:46:34,429 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:46:34,435 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 21:46:40,136 - ERROR - 12306Spider - Main execution failed: expected string or bytes-like object, got 'dict'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 81, in main
+    RepeatSubmitToken = extract_repeat_submit_token(dc_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\token_parser.py", line 6, in extract_repeat_submit_token
+    match = re.search(r"globalRepeatSubmitToken\s*=\s*'(.+?)'", html_text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\re\__init__.py", line 177, in search
+    return _compile(pattern, flags).search(string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'dict'
+2025-07-24 21:48:05,213 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:48:05,213 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:48:18,059 - INFO - 12306Spider - 无可用 cookie，尝试手动登录...
+2025-07-24 21:48:18,060 - INFO - 12306Spider - 登录成功，cookie 已保存。
+2025-07-24 21:48:24,689 - ERROR - 12306Spider - Main execution failed: expected string or bytes-like object, got 'dict'
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 81, in main
+    RepeatSubmitToken = extract_repeat_submit_token(dc_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\py\12306抢票\utils\token_parser.py", line 6, in extract_repeat_submit_token
+    match = re.search(r"globalRepeatSubmitToken\s*=\s*'(.+?)'", html_text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\re\__init__.py", line 177, in search
+    return _compile(pattern, flags).search(string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'dict'
+2025-07-24 21:50:15,015 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:50:15,015 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:50:15,020 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 21:50:21,234 - ERROR - 12306Spider - Main execution failed: cannot access local variable 'dc_html' where it is not associated with a value
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 73, in main
+    print(dc_html)
+          ^^^^^^^
+UnboundLocalError: cannot access local variable 'dc_html' where it is not associated with a value
+2025-07-24 21:50:48,331 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:50:48,331 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:50:48,335 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 21:50:54,195 - ERROR - 12306Spider - Main execution failed: cannot access local variable 'dc_html' where it is not associated with a value
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 75, in main
+    if not dc_html:
+           ^^^^^^^
+UnboundLocalError: cannot access local variable 'dc_html' where it is not associated with a value
+2025-07-24 21:51:10,108 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:51:10,108 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:51:10,113 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 21:51:16,276 - ERROR - 12306Spider - Main execution failed: name 'json' is not defined
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 80, in main
+    dc_html = json.loads(dc_html_json)
+              ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'
+2025-07-24 21:51:35,026 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:51:35,026 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:51:35,031 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 21:51:40,831 - ERROR - 12306Spider - Main execution failed: the JSON object must be str, bytes or bytearray, not dict
+Traceback (most recent call last):
+  File "E:\py\12306抢票\main.py", line 80, in main
+    dc_html = json.loads(dc_html_json)
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\Lib\json\__init__.py", line 339, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not dict
+2025-07-24 21:52:07,233 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:52:07,233 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:52:07,238 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 21:58:29,578 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:58:29,578 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 21:58:29,583 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 22:02:46,775 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 22:02:46,775 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 22:02:46,781 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 22:03:31,235 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 22:03:31,235 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 22:03:31,239 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 22:04:05,696 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 22:04:05,696 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 22:04:05,701 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 22:37:26,356 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 22:37:26,356 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 22:37:26,361 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 22:42:46,386 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 22:42:46,386 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 22:42:46,392 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 22:43:03,910 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 22:43:03,910 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 22:43:03,915 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 22:43:43,383 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 22:43:43,383 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 22:43:43,388 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 23:02:09,053 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 23:02:09,053 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 23:02:09,057 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 23:03:30,561 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 23:03:30,561 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 23:03:30,567 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 23:05:46,156 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 23:05:46,156 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 23:05:46,160 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 23:06:38,274 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 23:06:38,274 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 23:06:38,279 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 23:06:42,541 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 200 OK"
+2025-07-24 23:11:01,419 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 23:11:01,420 - INFO - 12306Spider - 大帅比的程序开始运行!!!!!!!!!!!!!!!!!
+2025-07-24 23:11:01,425 - INFO - 12306Spider - 成功加载 cookie，使用已有登录信息。
+2025-07-24 23:11:05,767 - INFO - httpx - HTTP Request: POST https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest "HTTP/1.1 200 OK"
