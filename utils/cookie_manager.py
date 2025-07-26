@@ -25,7 +25,7 @@ def cookie_manager(config):
     to_station = ticket_config.get("to_station")  # 终点站 中文
     train_date = ticket_config.get("train_date")  # 有票的日期
     train_date_true = ticket_config.get("train_date_true")  # 票的日期
-    back_train_date = date.today().strftime("%Y-%m-%d")  # ✅ 转为字符串
+    back_train_date = date.today().strftime("%Y-%m-%d")  # 转为字符串
     user_config = config.get("user")
     username = user_config.get("username")
     # 第二步：登录或加载 session

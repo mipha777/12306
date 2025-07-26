@@ -1,6 +1,6 @@
-requests
-PyYAML
-Pillow
-playwright
-playwright-stealth
-fake-useragent 
+fake_useragent==2.2.0
+httpx==0.28.1
+playwright==1.53.0
+playwright_stealth==2.0.0
+PyYAML==6.0.2
+Requests==2.32.4

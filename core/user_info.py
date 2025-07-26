@@ -58,9 +58,10 @@ def build_passenger_strings(config, response_json: dict):
             allEncStr = passenger_info["allEncStr"]  # 加密字符串
             passengerTicketStr = f"{seat_type},{Ticket_type},{passenger_type},{passenger_name},{passenger_id_type_code},{passenger_id_no},{mobile_no},{mysticalparameter},{allEncStr}"
             oldPassengerStr = f"{passenger_name},{passenger_id_type_code},{passenger_id_no},1_"
+            print('核实预填乘车人成功')
             return passengerTicketStr, oldPassengerStr
         else:
-            print(passengers)
+            print('核实预填乘车人信息中...')
 
 if __name__ == '__main__':
     data = {

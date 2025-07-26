@@ -57,6 +57,18 @@ def back_last_cookies(from_station):
     cookie_str = '; '.join([f'{k}={v}' for k, v in cookies.items()])
     return cookie_str
 
+def back_last_buy_cookie():
+    # 1. 读取 JSON 文件内容为字典
+    with open(json_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    # 2. 删除指定的键（如果存在）
+    data.pop("_passport_session", None)
+    data.pop("uamtk", None )
+    # 3. 写回文件
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+
+
 def back_cookies():
     # 读取最新的cookies
     with open(json_path, 'r', encoding='utf-8') as f:

@@ -1,8 +1,0 @@
-2025-07-23 17:48:17,716 - INFO - 12306Spider - 日志模块测试：这是一次 info 级别的日志。
-2025-07-23 17:48:17,717 - WARNING - 12306Spider - 日志模块测试：这是一次 warning 级别的日志。
-2025-07-23 17:48:17,717 - ERROR - 12306Spider - 日志模块测试：这是一次 error 级别的日志。
-2025-07-23 18:51:29,026 - INFO - 12306Spider - 大帅比的程序开始运行。
-2025-07-23 18:51:29,030 - ERROR - 12306Spider - Main execution failed: 'module' object is not callable
-
-2025-07-23 18:55:13,703 - INFO - 12306Spider - 大帅比的程序开始运行。
-2025-07-23 18:55:13,710 - INFO - 12306Spider - ✅ 成功加载 cookie，使用已有登录信息。

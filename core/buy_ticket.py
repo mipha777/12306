@@ -30,13 +30,13 @@ class TicketBuyer:
             resp.raise_for_status()
             result = resp.json()
             if result.get("status"):
-                print("✅ 身份验证成功！")
+                print("身份验证成功！")
                 return True
             else:
-                print(f"❌ 身份验证失败: {result.get('messages')}")
+                print(f"身份验证失败: {result.get('messages')}")
                 return False
         except Exception as e:
-            print(f"❌ 身份验证请求异常: {e}")
+            print(f"身份验证请求异常: {e}")
             return False
 
     def submit_order_request(self, secret_str, train_date, back_train_date, from_station, to_station,bed_level_info, cookies,purpose_codes="ADULT"):
@@ -91,13 +91,13 @@ class TicketBuyer:
                 resp.raise_for_status()
                 result = resp.json()
                 if result.get("status"):
-                    print("✅ 提交订单请求成功！")
+                    print("提交购票请求成功！")
                     return True
                 else:
-                    print(f"❌ 提交订单失败: {result.get('messages')}")
+                    print(f"提交购票请求失败: {result.get('messages')}")
                     return '203'
         except Exception as e:
-            print(f"❌ 提交订单请求异常: {e}")
+            print(f"提交购票请求异常: {e}")
             if '302' in str(e):
                 return '302'
             else:
@@ -140,7 +140,7 @@ class TicketBuyer:
                 resp.raise_for_status()
                 content_type = resp.headers.get("content-type", "")
                 if "text/html" in content_type:  # HTML 页面
-                    print("订单确认页面初始化成功（返回HTML）")
+                    print("订单确认页面初始化成功")
                     return resp.text
                 elif "application/json" in content_type:
                     result = resp.json()
@@ -203,13 +203,13 @@ class TicketBuyer:
                 resp.raise_for_status()
                 result = resp.json()
                 if result.get("status"):
-                    print("✅ 提交订单请求成功！")
+                    print("提交订单请求成功！")
                     return result
                 else:
-                    print(f"❌ 提交订单失败: {result.get('messages')}")
+                    print(f"提交订单失败: {result.get('messages')}")
                     return False
         except Exception as e:
-            print(f"❌ 提交订单请求异常: {e}")
+            print(f"提交订单请求异常: {e}")
             return False
 
     def check_order_info(self, passenger_ticket_str, old_passenger_str, repeat_submit_token):
@@ -243,13 +243,13 @@ class TicketBuyer:
             resp.raise_for_status()
             result = resp.json()
             if result.get("status"):
-                print("✅ 订单信息检查通过！")
+                print("订单信息检查通过！")
                 return True
             else:
-                print(f"❌ 订单信息检查失败: {result.get('messages')}")
+                print(f"订单信息检查失败: {result.get('messages')}")
                 return False
         except Exception as e:
-            print(f"❌ 订单信息检查异常: {e}")
+            print(f"订单信息检查异常: {e}")
             return False
 
     def confirm_single_for_queue(self, passengerTicketStr, oldPassengerStr, key_check_isChange, leftTicketStr,train_location,REPEAT_SUBMIT_TOKEN, choose_seats='', seatDetailType='000', is_jy='N', is_cj='Y',encryptedData='',whatsSelect='1',roomType='00',dwAll='N',_json_att='', purpose_codes='00'):
@@ -269,24 +269,7 @@ class TicketBuyer:
         :param is_jy: 是否军人（默认N）
         :param is_cj: 是否残疾（默认Y）
         :return: True/False
-        {
-  "passengerTicketStr": "3,0,1,李浩歌,1,4127***********634,188****2698,N,1be6b8b1e436f0de43998e478148524d20ac2bc947d2b58d3218a4b10eae8f4efc0cf22e751e14cedeb261b42fb95c637064a5591b72b58314cebc71cdf405e1dee4af3f0947645264e03dea190d5e32",
-  "oldPassengerStr": "李浩歌,1,4127***********634,1_",
-  "purpose_codes": "00",
-  "key_check_isChange": "21A1EB7B7C8D00376B00964846E6B59EEDF881AAD7801BC8E4EA4705",
-  "leftTicketStr": "%2BGuGWfAe%2Fbv5Xtj9oXYHd1hcW%2BeWr5SWhoc0gLuCJMoy9BHqvGHvRTWuWOQ%3D",
-  "train_location": "K2",
-  "choose_seats": "",
-  "seatDetailType": "000",
-  "is_jy": "N",
-  "is_cj": "Y",
-  "encryptedData": "",
-  "whatsSelect": "1",
-  "roomType": "00",
-  "dwAll": "N",
-  "_json_att": "",
-  "REPEAT_SUBMIT_TOKEN": "c91d0191c46a566128243d2d2a62dd09"
-}
+
         """
         import urllib.parse
         url = "https://kyfw.12306.cn/otn/confirmPassenger/confirmSingleForQueue"
@@ -314,16 +297,17 @@ class TicketBuyer:
         }
         try:
             resp = self.session.post(url, data=data, headers=headers, timeout=10)
+            # status_code = resp.status_code  # 获取状态码
             resp.raise_for_status()
             result = resp.json()
             if result.get("status"):
-                print("✅ 排队确认成功！")
-                return result
+                print("排队确认成功！")
+                return True
             else:
-                print(f"❌ 排队确认失败: {result.get('messages')}")
+                print(f"排队确认失败: {result.get('messages')}")
                 return False
         except Exception as e:
-            print(f"❌ 排队确认异常: {e}")
+            print(f"排队确认异常: {e}")
             return False
 
     def query_order_wait_time(self, repeat_submit_token):
@@ -348,10 +332,10 @@ class TicketBuyer:
             resp = self.session.get(url, params=params, headers=headers, timeout=10)
             resp.raise_for_status()
             result = resp.json()
-            print("✅ 查询排队/订单等待时间成功！")
+            print("查询排队/订单等待时间成功！")
             return result.get("data", {}).get("orderId")
         except Exception as e:
-            print(f"❌ 查询排队/订单等待时间异常: {e}")
+            print(f"查询排队/订单等待时间异常: {e}")
             return None
 
     def result_order_for_dc_queue(self, repeat_submit_token, order_sequence_no):
@@ -374,9 +358,9 @@ class TicketBuyer:
             resp = self.session.post(url, data=data, headers=headers, timeout=10)
             resp.raise_for_status()
             result = resp.json()
-            print("✅ 查询订单结果成功！")
+            print("查询订单结果成功！")
             return result.get("data", {})
         except Exception as e:
-            print(f"❌ 查询订单结果异常: {e}")
+            print(f"查询订单结果异常: {e}")
             return None
 

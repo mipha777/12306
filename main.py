@@ -19,7 +19,7 @@ from utils.get_nested_value import get_nested_value_fun, get_station_codes
 from utils.token_parser import  *
 from core.user_info import build_passenger_strings
 from utils.cookie_manager import cookie_manager
-from utils.headers_utils import back_last_cookies,back_cookies
+from utils.headers_utils import back_last_cookies,back_cookies,back_last_buy_cookie
 from utils.clean_cookies import cookies_clean
 # 加载配置
 def load_config(path='config.yaml'):
@@ -69,7 +69,7 @@ def main():
         filtered_tickets = ticket_filter.filter_tickets(tickets,from_station_code)
         print(f'筛选完成 共有{len(filtered_tickets)}辆车次符合条件')
         # 对筛选后的车票进行购买
-
+        time.sleep(1)
         ticket_buyer = TicketBuyer(session_manager)
         # 1.身份效验
         ticket_buyer.ensure_user_login()
@@ -96,14 +96,14 @@ def main():
             exit() # 这里后期重新发起请求 发起三次均失败 则会重新启动程序
         else:
             logger.info('订单初步请求成功')
-
+        time.sleep(1)
         # 3. 初始化订单确认页面并提取 token
         dc_html_json = ticket_buyer.init_dc(cookies=cookies)
         dc_html = json.dumps(dc_html_json)
         RepeatSubmitToken,key_check_isChange,train_location,leftTicket,train_no = html_prase(dc_html)
         # 重要步骤# 重要步骤# 重要步骤# 重要步骤# 重要步骤# 重要步骤# 重要步骤# 重要步骤# 重要步骤# 重要步骤# 重要步骤# 重要步骤# 重要步骤# 重要步骤
-        print(RepeatSubmitToken,key_check_isChange,train_location,leftTicket,train_no)
         # 4. 获取乘客信息
+        time.sleep(1)
         response_json = ticket_buyer.get_passenger_dtos(RepeatSubmitToken,cookies=cookies)
         # 5. 构建乘客信息字符串（需从 user_info.py 导入 build_passenger_strings）
         p_str, op_str = build_passenger_strings(config, response_json)
@@ -116,21 +116,18 @@ def main():
         # === 等待到指定时间 ===
 
         target_time = datetime.strptime(train_time_true, "%H:%M:%S").time()
-        print(f"等待时间点：{target_time_str}")
+        print(f"开售时间点:{target_time}.....正在等待中.....")
 
         while True:
             now = datetime.now().time()
             if now >= target_time:
-                print(f"--------------到达指定时间：{now}，开始抢票------------")
+                print(f"--------------到达指定时间：{now}，开始抢票---------------")
+                start_time = time.time() # 记录开始时间
                 break
-            time.sleep(1)
+            time.sleep(0.3)
 
-        cookies = back_last_cookies(train_date_true) # 改变cookies的日期
-        dc_html_json = ticket_buyer.init_dc(cookies=cookies)
-        dc_html = json.dumps(dc_html_json)
-        # 提取相关参数
-        RepeatSubmitToken, key_check_isChange, train_location, leftTicket, train_no = html_prase(dc_html)
         # 7. 确认排队（需从 ticket 提取相关参数）
+        back_last_buy_cookie() # 去除cookie内多余的参数
         result = ticket_buyer.confirm_single_for_queue(
             passengerTicketStr=p_str,
             oldPassengerStr=op_str,
@@ -139,15 +136,20 @@ def main():
             train_location=train_location,
             REPEAT_SUBMIT_TOKEN=RepeatSubmitToken
         )
-        print(result)
+        end_time = time.time()  # 记录结束时间
         if result:
-            # 8. 查询订单结果（轮询）
-            for _ in range(10):
-                status = ticket_buyer.query_order_wait_time(RepeatSubmitToken)
-                if status and status != 'null':
-                    print("购票成功！")
-                    break
-                time.sleep(1)
+            print('购买成功')
+        print(f"代码执行时间：{end_time - start_time:.4f} 秒")
+        # # 8. 查询订单结果（轮询）
+        # for _ in range(10):
+        #     status = ticket_buyer.query_order_wait_time(RepeatSubmitToken)
+        #     if status and status != 'null':
+        #         print("购票成功！")
+        #
+        #         cookies_clean()
+        #         break
+        #     time.sleep(1)
+        # # ticket_buyer.result_order_for_dc_queue()
     except Exception as e:
         print(f"程序执行出错: {str(e)}")
         # 记录详细错误日志
