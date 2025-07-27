@@ -22,14 +22,14 @@ def query_tickets(session_manager: SessionManager, from_station_name: str, to_st
         with open("data/station_name_map.json", 'r', encoding='utf-8') as f:
             station_map = json.load(f)
     except Exception as e:
-        print(f"❌ 加载车站映射文件失败: {e}")
+        print(f"加载车站映射文件失败: {e}")
         return None
 
     # 2. 获取车站代码
     from_station_code = station_map.get(from_station_name)
     to_station_code = station_map.get(to_station_name)
     if not all([from_station_code, to_station_code]):
-        print(f"❌ 出发站({from_station_name})或到达站({to_station_name})不存在于映射文件中。")
+        print(f"出发站({from_station_name})或到达站({to_station_name})不存在于映射文件中。")
         return None
 
     # 3. 更新查询 Cookie
@@ -59,18 +59,18 @@ def query_tickets(session_manager: SessionManager, from_station_name: str, to_st
 
     # 5. 发起请求
     try:
-        print(f"🚀 正在查询 {train_date} 从 {from_station_name} 到 {to_station_name} 的车票...")
+        print(f"正在查询 {train_date} 从 {from_station_name} 到 {to_station_name} 的车票...")
         resp = session_manager.get_session().get(QUERY_URL, params=params, headers=headers, timeout=10)
         resp.raise_for_status()
         result = resp.json()
         if result.get("status"):
-            print("✅ 查询成功！")
+            print("查询成功！")
             return result.get("data", {})
         else:
-            print(f"❌ 查询失败: {result.get('messages')}")
+            print(f"查询失败: {result.get('messages')}")
             return None
     except Exception as e:
-        print(f"❌ 请求查票接口时发生错误: {e}")
+        print(f"请求查票接口时发生错误: {e}")
         return None
 
 def run_query():
@@ -86,21 +86,21 @@ def run_query():
         train_date = ticket_config.get("train_date")
 
         if not all([username, from_station, to_station, train_date]):
-            print("❌ config.yaml 中的用户或票务信息不完整。")
+            print("config.yaml 中的用户或票务信息不完整。")
             return
     except Exception as e:
-        print(f"❌ 加载配置文件时出错: {e}")
+        print(f"加载配置文件时出错: {e}")
         return
 
     session_manager = SessionManager(username)
     if not session_manager.load_cookies():
-        print("❌ 未找到有效的 cookie，请先运行 login.py 登录。")
+        print("未找到有效的 cookie，请先运行 login.py 登录。")
         return
 
     query_result = query_tickets(session_manager, from_station, to_station, train_date)
 
     if query_result:
-        print("🎉 查询结果分析：")
+        print("查询结果分析：")
         result_list = query_result.get('result', [])
         station_names = query_result.get('map', {})
         if not result_list:

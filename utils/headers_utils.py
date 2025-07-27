@@ -2,11 +2,15 @@ from fake_useragent import UserAgent
 import random
 import os
 import json
+import yaml
 # 获取当前文件所在目录（即 utils/）
 cur_dir = os.path.dirname(__file__)
-
+path='config.yaml'
+with open(path, 'r', encoding='utf-8') as f:
+    config =  yaml.safe_load(f)
+passengers = config.get('passengers', {})['name'] # 乘车人名字
 # 拼出目标 JSON 文件路径：跳出一层到项目根，再进 data 文件夹
-json_path = os.path.join(cur_dir, '..', 'cookies', 'woshidashuaibi.json')
+json_path = os.path.join(cur_dir, '..', 'cookies', f'{passengers}.json')
 json_path = os.path.abspath(json_path)
 def build_dynamic_headers(base_headers=None):
     ua = UserAgent()
@@ -48,16 +52,18 @@ def build_dynamic_headers(base_headers=None):
         headers.update(base_headers)
     return headers
 
-def back_last_cookies(from_station):
+def back_chance_cookies(from_station): #更改日期
     # 读取最新的cookies
     with open(json_path, 'r', encoding='utf-8') as f:
         cookies = json.load(f)
     # 拼接成合法的 Cookie 字符串
     cookies['_jc_save_fromDate'] = from_station
     cookie_str = '; '.join([f'{k}={v}' for k, v in cookies.items()])
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(cookies, f, ensure_ascii=False, indent=4)
     return cookie_str
 
-def back_last_buy_cookie():
+def back_last_buy_cookie(): #
     # 1. 读取 JSON 文件内容为字典
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)

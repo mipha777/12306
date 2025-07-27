@@ -8,10 +8,11 @@
 
 import requests
 from core.session_manager import SessionManager
-from utils.headers_utils import build_dynamic_headers,back_last_cookies
+from utils.headers_utils import build_dynamic_headers
 import re
 from collections import OrderedDict
 import httpx
+from utils.logger import logger
 
 class TicketBuyer:
     def __init__(self, session_manager: SessionManager):
@@ -30,13 +31,13 @@ class TicketBuyer:
             resp.raise_for_status()
             result = resp.json()
             if result.get("status"):
-                print("身份验证成功！")
+                logger.info("身份验证成功！")
                 return True
             else:
-                print(f"身份验证失败: {result.get('messages')}")
+                logger.error(f"身份验证失败: {result.get('messages')}")
                 return False
         except Exception as e:
-            print(f"身份验证请求异常: {e}")
+            logger.warn(f"身份验证请求异常: {e}")
             return False
 
     def submit_order_request(self, secret_str, train_date, back_train_date, from_station, to_station,bed_level_info, cookies,purpose_codes="ADULT"):
@@ -203,16 +204,16 @@ class TicketBuyer:
                 resp.raise_for_status()
                 result = resp.json()
                 if result.get("status"):
-                    print("提交订单请求成功！")
+                    print("获取乘客信息成功")
                     return result
                 else:
-                    print(f"提交订单失败: {result.get('messages')}")
+                    print(f"获取乘客信息失败: {result.get('messages')}")
                     return False
         except Exception as e:
-            print(f"提交订单请求异常: {e}")
+            print(f"获取乘客信息请求异常: {e}")
             return False
 
-    def check_order_info(self, passenger_ticket_str, old_passenger_str, repeat_submit_token):
+    def check_order_info(self, passenger_ticket_str, old_passenger_str, repeat_submit_token, cookies):
         """
         检查订单信息（第四步）
         :param passenger_ticket_str: 乘客票信息字符串
@@ -222,9 +223,27 @@ class TicketBuyer:
 
         """
         url = "https://kyfw.12306.cn/otn/confirmPassenger/checkOrderInfo"
-        headers = build_dynamic_headers({
-            "Referer": "https://kyfw.12306.cn/otn/confirmPassenger/initDc"
-        })
+        headers = OrderedDict([
+            ("Host", "kyfw.12306.cn"),
+            ("Connection", "keep-alive"),
+            ("sec-ch-ua-platform", "\"Windows\""),
+            ("X-Requested-With", "XMLHttpRequest"),
+            ("User-Agent",
+             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"),
+            ("Accept", "application/json, text/javascript, */*; q=0.01"),
+            ("sec-ch-ua", "\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\""),
+            ("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8"),
+            ("sec-ch-ua-mobile", "?0"),
+            ("Origin", "https://kyfw.12306.cn"),
+            ("Sec-Fetch-Site", "same-origin"),
+            ("Sec-Fetch-Mode", "cors"),
+            ("Sec-Fetch-Dest", "empty"),
+            ("Referer", "https://kyfw.12306.cn/otn/confirmPassenger/initDc"),
+            ("Accept-Encoding", "gzip, deflate, br, zstd"),
+            ("Accept-Language", "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"),
+            ("Cookie",cookies)
+             ])
+
         data = {
             "cancel_flag": "2",
             "bed_level_order_num": "000000000000000000000000000000",
@@ -252,7 +271,7 @@ class TicketBuyer:
             print(f"订单信息检查异常: {e}")
             return False
 
-    def confirm_single_for_queue(self, passengerTicketStr, oldPassengerStr, key_check_isChange, leftTicketStr,train_location,REPEAT_SUBMIT_TOKEN, choose_seats='', seatDetailType='000', is_jy='N', is_cj='Y',encryptedData='',whatsSelect='1',roomType='00',dwAll='N',_json_att='', purpose_codes='00'):
+    def confirm_single_for_queue(self,cookies, passengerTicketStr, oldPassengerStr, key_check_isChange, leftTicketStr,train_location,REPEAT_SUBMIT_TOKEN, choose_seats='', seatDetailType='000', is_jy='N', is_cj='Y',encryptedData='',whatsSelect='1',roomType='00',dwAll='N',_json_att='', purpose_codes='00'):
         """
         确认排队 第五步
         :param train_date: 时间
@@ -273,9 +292,26 @@ class TicketBuyer:
         """
         import urllib.parse
         url = "https://kyfw.12306.cn/otn/confirmPassenger/confirmSingleForQueue"
-        headers = build_dynamic_headers({
-            "Referer": "https://kyfw.12306.cn/otn/confirmPassenger/initDc"
-        })
+        headers = OrderedDict([
+            ("Host", "kyfw.12306.cn"),
+            ("Connection", "keep-alive"),
+            ("sec-ch-ua-platform", "\"Windows\""),
+            ("X-Requested-With", "XMLHttpRequest"),
+            ("User-Agent",
+             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"),
+            ("Accept", "application/json, text/javascript, */*; q=0.01"),
+            ("sec-ch-ua", "\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\""),
+            ("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8"),
+            ("sec-ch-ua-mobile", "?0"),
+            ("Origin", "https://kyfw.12306.cn"),
+            ("Sec-Fetch-Site", "same-origin"),
+            ("Sec-Fetch-Mode", "cors"),
+            ("Sec-Fetch-Dest", "empty"),
+            ("Referer", "https://kyfw.12306.cn/otn/confirmPassenger/initDc"),
+            ("Accept-Encoding", "gzip, deflate, br, zstd"),
+            ("Accept-Language", "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"),
+            ("Cookie", cookies)
+        ])
         
         data = {
             "passengerTicketStr": passengerTicketStr,
@@ -298,16 +334,16 @@ class TicketBuyer:
         try:
             resp = self.session.post(url, data=data, headers=headers, timeout=10)
             # status_code = resp.status_code  # 获取状态码
-            resp.raise_for_status()
-            result = resp.json()
-            if result.get("status"):
-                print("排队确认成功！")
+            resp_data = resp.json().get("data", {})  # 解析返回 JSON
+            submit_status = resp_data.get("submitStatus", None)
+            if submit_status:
+                logger.info("排队确认成功！")
                 return True
             else:
-                print(f"排队确认失败: {result.get('messages')}")
+                logger.error(f"排队确认失败: {resp_data.get("errMsg", None)}")
                 return False
         except Exception as e:
-            print(f"排队确认异常: {e}")
+            logger.error(f"排队确认异常: {e}")
             return False
 
     def query_order_wait_time(self, repeat_submit_token):

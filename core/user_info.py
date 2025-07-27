@@ -7,7 +7,8 @@
 """
 
 import yaml
-
+from utils.logger import logger
+from utils.clean_cookies import cookies_clean
 # 证件类型映射（常用：1-二代身份证，C-港澳通行证，G-台湾通行证）
 ID_TYPE_MAP = {
     '身份证': '1',
@@ -29,20 +30,14 @@ SEAT_TYPE_MAP = {
     '硬座': '1',
     '无座': '1',
 }
-
-
-
-      # "passengerTicketStr": "1,0,1,张森林,1,4116***********912,166****0702,N,432d99286ad3262483d7d67c6335504908695b23dd16a9d39fd82c738103fd052b7bbf790f19f30fc2d3d20146ca5eb58e465ae00e8efb8ab5e2af902cdb0931dee4af3f0947645264e03dea190d5e32",
-      #  "oldPassengerStr": "张森林,1,4116***********912,1_",
-def build_passenger_strings(config, response_json: dict):
+def build_passenger_strings(config, passengers ,response_json: dict):
     """
     根据配置文件和座位类型，拼接 passengerTicketStr 和 oldPassengerStr
     :param config_path: 配置文件路径
     :param 
     :return: (passengerTicketStr, oldPassengerStr)
     """
-    passengers = config.get('passengers',{})['name']
-    # passenger_name_Ready = passengers['name']
+    passengers = passengers
     seat_type_name = config.get('ticket_info', {}).get('seat_priority')
     seat_type = SEAT_TYPE_MAP.get(seat_type_name[0]) # 座位类型
     all_info =  response_json["data"]["normal_passengers"]
@@ -58,11 +53,14 @@ def build_passenger_strings(config, response_json: dict):
             allEncStr = passenger_info["allEncStr"]  # 加密字符串
             passengerTicketStr = f"{seat_type},{Ticket_type},{passenger_type},{passenger_name},{passenger_id_type_code},{passenger_id_no},{mobile_no},{mysticalparameter},{allEncStr}"
             oldPassengerStr = f"{passenger_name},{passenger_id_type_code},{passenger_id_no},1_"
-            print('核实预填乘车人成功')
+            logger.info('核实预填乘车人成功')
             return passengerTicketStr, oldPassengerStr
         else:
-            print('核实预填乘车人信息中...')
-
+            logger.info('核实预填乘车人信息中...')
+    logger.error('手机上并未添加乘车人信息认证')
+    logger.info('即将清除使用信息 并退出程序')
+    cookies_clean()
+    logger.info('程序退出')
 if __name__ == '__main__':
     data = {
         "validateMessagesShowId": "_validatorMessage",

@@ -118,7 +118,7 @@ class LoginHandler:
         try:
             self.session.get("https://kyfw.12306.cn/otn/resources/login.html", timeout=5)
         except Exception as e:
-            print(f"W: 访问登录页失败，但这不影响主要流程: {e}")
+            print(f"访问登录页失败，但这不影响主要流程: {e}")
 
         print("开始登录...")
         # 1. 获取并校验验证码
@@ -155,10 +155,10 @@ class LoginHandler:
         try:
             resp = self.session.post(AUTH_CLIENT_URL, data={"tk": ""}) # 传空 tk 必然失败，但可以检查 cookie
             if resp.status_code == 200 and "username" in resp.json():
-                 print(f"✅ 用户 {resp.json()['username']} 当前已登录。")
+                 print(f"用户 {resp.json()['username']} 当前已登录。")
                  return True
         except Exception:
             pass
         
-        print("ℹ️ 当前未登录或登录已失效。")
+        print("ℹ当前未登录或登录已失效。")
         return False 

@@ -10,11 +10,12 @@ import urllib.parse
 import requests
 import json
 import os
-import sys
+import login
 from fake_useragent import UserAgent
+from utils.logger import logger
+import sys
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
-import login
 
 COOKIES_DIR = "cookies"
 # 创建一个全局的 UserAgent 实例，以便在多个模块间共享
@@ -27,7 +28,7 @@ class SessionManager:
     """
 
     def __init__(self, username: str):
-        print(f"[DEBUG] SessionManager 初始化，收到 username: {username!r}")
+        logger.info(f"SessionManager 初始化，收到乘车用户名: {username!r}")
         assert username, "初始化 SessionManager 时，username 不能为空！"
         self.username = username
         self.session = requests.Session()
@@ -43,26 +44,27 @@ class SessionManager:
     @property
     def _cookie_path(self) -> str:
         """获取当前用户 cookie 文件的路径"""
+        logger.info(f"生成用户{self.username}的cookie文件")
         return os.path.join(COOKIES_DIR, f"{self.username}.json")
 
     def load_cookies(self) -> bool:
         """从本地文件加载 cookie 到 session"""
         cookie_path = self._cookie_path
         if os.path.exists(cookie_path):
-            print(f"ℹ正在从 {cookie_path} 加载 cookie...")
+            logger.info(f"ℹ正在从 {cookie_path} 加载 cookie...")
             try:
                 with open(cookie_path, 'r') as f:
                     cookies = json.load(f)
                     self.session.cookies.update(cookies)
-                print("Cookie 加载成功")
+                logger.info("Cookie 加载成功")
                 return True
             except json.JSONDecodeError:
-                print(f"Cookie 文件 {cookie_path} 格式错误，加载失败。")
+                logger.error(f"Cookie 文件 {cookie_path} 格式错误，加载失败。")
                 return False
 
-        else:login.login_handler()
-
-        print("未找到本地 cookie 文件。")
+        else:
+            logger.info('未找到用户cookie信息')
+            login.login_handler()
         return False
 
     def save_cookies(self, cookies_dict: dict = None):
@@ -71,7 +73,7 @@ class SessionManager:
         如果提供了 cookies_dict, 则保存它，否则保存 session 中的 cookie。
         """
         cookie_path = self._cookie_path
-        print(f"正在保存 cookie 到 {cookie_path}...")
+        logger.info(f"正在保存 cookie 到 {cookie_path}...")
 
         # 确定要保存的 cookie
         data_to_save = cookies_dict
@@ -80,7 +82,7 @@ class SessionManager:
 
         with open(cookie_path, 'w') as f:
             json.dump(data_to_save, f, indent=4)
-        print(f"Cookie 已成功保存。")
+        logger.info(f"Cookie 已成功保存。")
 
     def get_session(self) -> requests.Session:
         """获取当前的 session 实例"""
@@ -109,7 +111,7 @@ class SessionManager:
         # 打印时解码，方便查看
         from_station_decoded = urllib.parse.unquote(from_station.split(',')[0])
         to_station_decoded = urllib.parse.unquote(to_station.split(',')[0])
-        print(f"已更新查询 Cookie：从 {from_station_decoded} 到 {to_station_decoded}，日期 {train_date}")
+        logger.info(f"已更新查询 Cookie：从 {from_station_decoded} 到 {to_station_decoded}，日期 {train_date}")
 
 
 

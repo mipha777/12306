@@ -7,24 +7,35 @@
 """
 import os
 import shutil
+from utils.logger import logger
 
-
+current_path = os.path.abspath(__file__)
+# 获取 utils 目录路径
+utils_dir = os.path.dirname(current_path)
+# 获取上一级目录（即 12306 目录）
+project_root = os.path.dirname(utils_dir)
+# 拼出 cookies 目录路径
+cookies_dir = os.path.join(project_root, "cookies")
+# 临时浏览器的路径
+browser_path = os.path.join(project_root, "browser_data")
 def cookies_clean():
-    log_path = os.path.join('..', 'cookies', 'woshidashuaibi.json')
-    browser_path = os.path.join('..', 'browser_data')
-    if os.path.exists(log_path):
-        os.remove(log_path)
-        print(f"已删除: {log_path}")
-    else:
-        print(f"未找到: {log_path}")
+    for filename in os.listdir(cookies_dir):
+        if filename.endswith(".json"):
+            file_path = os.path.join(cookies_dir, filename)
+            try:
+                os.remove(file_path)
+                print(f"已删除：{file_path}")
+            except Exception as e:
+                print(f"删除失败：{file_path}，错误：{e}")
+
     if os.path.exists(browser_path) and os.path.isdir(browser_path):
         try:
             shutil.rmtree(browser_path)
-            print(f"文件夹 {browser_path} 删除成功！")
+            logger.info(f"文件夹 {browser_path} 删除成功！")
         except PermissionError:
-            print(f"权限不足，无法删除 {browser_path}，请关闭占用程序或以管理员身份运行。")
+            logger.error(f"权限不足，无法删除 {browser_path}，请关闭占用程序或以管理员身份运行。")
     else:
-        print(f"{browser_path} 不存在或不是文件夹。")
+        logger.error(f"{browser_path} 不存在或已删除")
 
-if __name__ == '__main__':
+if __name__ == '__main__': # 测试入口
     cookies_clean()

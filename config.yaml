@@ -1,30 +1,31 @@
 # 12306 抢票配置
-user:
-  username: "woshidashuaibi"
+#  ---------------------------------下面是需要更改的-----------------------------------------
+passengers:
+  name: "李浩歌" #  名字
 
 ticket_info:
-  # 出发日期，格式：YYYY-MM-DD
-  train_date: "2025-08-05" # 相同车次 有票的某一天
-  train_date_true: "2025-08-09" # 真正要购买票的日期 也就是要抢哪一天的票
-  train_time_true: "19:19:00"
-  # 出发地
-  from_station: "北京南"
-  # 目的地
-  to_station: "上海虹桥"
+# 出发日期，格式：YYYY-MM-DD
+  train_date: "2025-08-03" # 相同车次 有票的某一天
+
+  train_date_true: "2025-08-04" # 真正要购买票的日期 也就是要抢哪一天的票
+
+  train_time_true: "16:30:00" # 开售时间
+
+  from_station: "淄博"    # 出发地
+
+  to_station: "阜阳"    # 目的地
 
   preferred_trains:
-    - G141 # 车次号
+    - K4970 # 车次号    这里不填就去精神病院填入院申请单！！！
   seat_priority:
-    - 二等座  # 期望的座位类型，例如：商务座, 一等座, 二等座
-#  sleeper_preference: ""          # 如果是卧铺，优先考虑的铺位
-#  window_seat:                   # 是否优先靠窗
+    - 硬卧  # 期望的座位类型，例如：商务座, 一等座, 二等座, 硬卧..等等    这里不填就去精神病院填入院申请单！！！
+#  sleeper_preference: ""          # 如果是卧铺，优先考虑的铺位 暂时未加此功能
+#  window_seat:                   # 是否优先靠窗 暂时未加此功能
+#order:
+#  query_interval: 3
+#  accept_no_seat: false
 
-passengers:
-  name: "李浩歌"
 
-order:
-  query_interval: 3
-  accept_no_seat: false
 
 
 

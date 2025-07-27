@@ -31,21 +31,14 @@ class TicketFilter:
         if preferred_trains:
             preferred_trains_set = set(preferred_trains)
             tickets = [t for t in tickets if any(trains in t for trains in preferred_trains_set)and from_station_code in t]
-
-
-
         tickets = self.Filtered_tickets(tickets)
-
-
         # 步骤2：再筛选出含有配置中座位类型的，并且这些类型有票的
         def has_configured_seat_with_ticket(ticket):
             for seat in seat_priority:
                 val = ticket.get(seat, '--')
-                if val not in ['--', '无', '', None]:
-
+                if val not in ['--', '', None]:
                     return True
             return False
-
         filtered = [t for t in tickets if has_configured_seat_with_ticket(t)]
         '''# 步骤3：根据座位优先级排序
         def seat_score(ticket):
@@ -58,9 +51,11 @@ class TicketFilter:
         filtered.sort(key=seat_score)
         print(f'第三次筛选出{len(filtered)}趟车次')
         # print(filtered)'''
+        if len(filtered) == 0:
+            logger.error(f"共有{len(filtered)}辆车符合条件 车号错了还是座位错了？")
+            logger.error("程序退出")
+            exit()
         return filtered #车票信息已进行切割和筛选 返回的是列表包含字典[{}]
-
-
     def Filtered_tickets(self,tickets: list[dict]) -> list[dict]:
         # 定义座位索引和名称的映射
         all_train_result = []
@@ -86,7 +81,6 @@ class TicketFilter:
                 '所有的座位类型': parts[34],
                 '有票的座位类型': parts[35],
                 'bed_level_info': parts[53],
-                
             }
             all_train_result.append(train_info)
         return all_train_result

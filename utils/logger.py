@@ -13,8 +13,6 @@ import logging
 
 # 日志目录
 LOG_DIR = "logs"
-os.makedirs(LOG_DIR, exist_ok=True)
-
 # 日志文件名
 log_file = os.path.join(LOG_DIR, f"{datetime.now().strftime('%Y-%m-%d')}.log")
 
@@ -32,7 +30,7 @@ logging.basicConfig(
 )
 
 # 创建一个通用 logger 实例
-logger = logging.getLogger("12306Spider")
+logger = logging.getLogger("帅比助手提醒")
 
 
 if __name__ == "__main__":
