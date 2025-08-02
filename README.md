@@ -48,4 +48,8 @@
 - main 运行主程序
 - query_ticket (旧查票方法 弃用)
 - requirements 程序所用到的依赖库
+
+## 学习交流联系
+-moshaozi777@gmail.com
+
  
