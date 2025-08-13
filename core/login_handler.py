@@ -160,5 +160,5 @@ class LoginHandler:
         except Exception:
             pass
         
-        print("ℹ当前未登录或登录已失效。")
+        print("当前未登录或登录已失效。")
         return False 
