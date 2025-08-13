@@ -27,7 +27,7 @@ class TicketQuerier:
             with open(station_map_path, 'r', encoding='utf-8') as f:
                 self.station_map = json.load(f)
         except Exception as e:
-            print(f"❌ 加载车站映射文件失败: {e}")
+            print(f"加载车站映射文件失败: {e}")
             self.station_map = {}
 
     def _get_station_code(self, station_name: str) -> str:
