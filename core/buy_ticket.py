@@ -158,18 +158,7 @@ class TicketBuyer:
             if '302' in str(e):
                 print(f"重新登录")
             return False
-        # try:
-        #     resp = self.session.post(url, data=data, headers=headers, timeout=10)
-        #     resp.raise_for_status()
-        #     html = resp.text
-        #     token = re.search(r"var repeatSubmitToken = '(\w+)'", html)
-        #     token = token.group(1) if token else ""
-        #     print("✅ 订单确认页面初始化成功！")
-        #     return {"html": html, "repeat_submit_token": token}
-        # except Exception as e:
-        #     print(f"❌ 订单确认页面初始化异常: {e}")
-        #     return None
-
+        
     def get_passenger_dtos(self, repeat_submit_token,cookies):
         """
         获取乘客信息（第三步）
