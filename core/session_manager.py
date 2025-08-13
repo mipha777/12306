@@ -51,7 +51,7 @@ class SessionManager:
         """从本地文件加载 cookie 到 session"""
         cookie_path = self._cookie_path
         if os.path.exists(cookie_path):
-            logger.info(f"ℹ正在从 {cookie_path} 加载 cookie...")
+            logger.info(f"正在从 {cookie_path} 加载 cookie...")
             try:
                 with open(cookie_path, 'r') as f:
                     cookies = json.load(f)
