@@ -129,7 +129,7 @@ class TicketBuyer:
             ("Sec-Fetch-User", "?1"),
             ("Sec-Fetch-Dest", "document"),
             ("Referer",
-             "https://kyfw.12306.cn/otn/leftTicket/init?linktypeid=dc&fs=%E9%83%91%E5%B7%9E%E4%B8%9C,ZAF&ts=%E8%A5%BF%E5%AE%89,XAY&date=2025-08-01&flag=N,N,Y"),
+             "https://kyfw.12306.cn/otn/leftTicket/init?linktypeid=dc&fs=%E9%83%91%E5%B7%9E%E4%B8%9C,ZAF&ts=%E8%A5%BF%E5%AE%89,XAY&date=2025-09-15&flag=N,N,Y"),
             ("Accept-Encoding", "gzip, deflate, br, zstd"),
             ("Accept-Language", "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"),
             ("Cookie", cookies)
@@ -227,7 +227,7 @@ class TicketBuyer:
             ("Sec-Fetch-Site", "same-origin"),
             ("Sec-Fetch-Mode", "cors"),
             ("Sec-Fetch-Dest", "empty"),
-            ("Referer", "https://kyfw.12306.cn/otn/confirmPassenger/initDc"),
+            ("Referer", "https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs"),
             ("Accept-Encoding", "gzip, deflate, br, zstd"),
             ("Accept-Language", "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"),
             ("Cookie",cookies)
@@ -296,7 +296,7 @@ class TicketBuyer:
             ("Sec-Fetch-Site", "same-origin"),
             ("Sec-Fetch-Mode", "cors"),
             ("Sec-Fetch-Dest", "empty"),
-            ("Referer", "https://kyfw.12306.cn/otn/confirmPassenger/initDc"),
+            ("Referer", "https://kyfw.12306.cn/otn/confirmPassenger/checkOrderInfo"),
             ("Accept-Encoding", "gzip, deflate, br, zstd"),
             ("Accept-Language", "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"),
             ("Cookie", cookies)
@@ -344,7 +344,7 @@ class TicketBuyer:
         """
         url = "https://kyfw.12306.cn/otn/confirmPassenger/queryOrderWaitTime"
         headers = build_dynamic_headers({
-            "Referer": "https://kyfw.12306.cn/otn/confirmPassenger/initDc"
+            "Referer": "https://kyfw.12306.cn/otn/confirmPassenger/confirmSingleForQueue"
         })
         params = {
             "random": requests.utils.default_headers()['User-Agent'],
@@ -372,7 +372,7 @@ class TicketBuyer:
         """
         url = "https://kyfw.12306.cn/otn/confirmPassenger/resultOrderForDcQueue"
         headers = build_dynamic_headers({
-            "Referer": "https://kyfw.12306.cn/otn/confirmPassenger/initDc"
+            "Referer": "https://kyfw.12306.cn/otn/confirmPassenger/queryOrderWaitTime"
         })
         data = {
             "orderSequence_no": order_sequence_no,
